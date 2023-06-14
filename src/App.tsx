@@ -1,8 +1,10 @@
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <div className="App">
-      "Hello world!!!"
+    <div>
+      <header></header>
+      <Footer/>
     </div>
   );
 }
