@@ -1,8 +1,9 @@
+import logo from "../../images/logo.png"
 
 const Logo = () => {
     return (
         <>
-            <img src="../public/favicon.png" alt="logo"/>
+            <img src={logo} alt="logo" width='50px'/>
         </>
     )
 }
