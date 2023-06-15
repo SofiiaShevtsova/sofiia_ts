@@ -8,7 +8,8 @@ type User = {
     linkedin: string,
     gitHub: string,
     email: string,
-  }
+  },
+  navigation: string[]
 }
 
 export const userEn:User = {
@@ -22,6 +23,7 @@ export const userEn:User = {
     gitHub: "https://github.com/SofiiaShevtsova",
     email: "sofika2404@gmail.com",
   },
+  navigation:["About me", "My projects", "Contacts"],
 };
 
 export const userUa: User = {
@@ -35,5 +37,6 @@ export const userUa: User = {
     gitHub: "https://github.com/SofiiaShevtsova",
     email: "sofika2404@gmail.com",
   },
+    navigation:["Про мене", "Мої проекти", "Контакти"],
 }
 
