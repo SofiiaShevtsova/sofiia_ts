@@ -1,7 +1,6 @@
-import Navigation from "../Navigation/Navigation";
-import Logo from "../Logo/Logo";
+import {Navigation, Logo} from "../commons";
 
-const Header = () => {
+export const Header = () => {
   return (
     <>
       <Logo />
@@ -9,5 +8,3 @@ const Header = () => {
     </>
   );
 };
-
-export default Header;

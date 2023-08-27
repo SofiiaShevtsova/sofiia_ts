@@ -1,6 +1,6 @@
 import { userEn } from "../../service/data"
 
-const Footer = () => {
+export const Footer = () => {
     return (
       <div>
       <p >&#xA9; 2023</p>
@@ -10,5 +10,3 @@ const Footer = () => {
   </div>
     )
 }
-
-export default Footer

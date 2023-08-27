@@ -5,9 +5,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+background-image: linear-gradient(#535252, #292929);
+background-repeat: no-repeat;
+background-size: contain;
+height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.logo{
+  font-family: 'Lovers Quarrel', cursive;
+  font-size: 36px;
+  color: rgb(1, 17, 31);
+  text-shadow: 3px 3px 2px green;
 }
