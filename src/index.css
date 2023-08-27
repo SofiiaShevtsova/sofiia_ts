@@ -17,8 +17,13 @@ code {
 }
 
 .logo{
+  display: inline;
   font-family: 'Lovers Quarrel', cursive;
   font-size: 36px;
   color: rgb(1, 17, 31);
   text-shadow: 3px 3px 2px green;
+}
+
+footer .logo{
+  font-size: 24px;
 }

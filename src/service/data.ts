@@ -23,7 +23,7 @@ export const userEn: User = {
     gitHub: "https://github.com/SofiiaShevtsova",
     email: "sofika2404@gmail.com",
   },
-  navigation: ["About me", "My projects", "Contacts"],
+  navigation: ["About me", "Skills", "Experience", "Portfolio", "Contacts"],
 };
 
 export const userUa: User = {
@@ -37,5 +37,5 @@ export const userUa: User = {
     gitHub: "https://github.com/SofiiaShevtsova",
     email: "sofika2404@gmail.com",
   },
-  navigation: ["Про мене", "Мої проекти", "Контакти"],
+  navigation: ["Це я!", "Навички", "Досвід", "Мої роботи", "Зв'язатися зі мною"],
 };
