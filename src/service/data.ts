@@ -1,4 +1,4 @@
-type User = {
+export type User = {
   name: string;
   work: string;
   phrase: string;
@@ -9,7 +9,7 @@ type User = {
     gitHub: string;
     email: string;
   };
-  navigation: string[];
+  navigation: string[][];
 };
 
 export const userEn: User = {
@@ -23,7 +23,7 @@ export const userEn: User = {
     gitHub: "https://github.com/SofiiaShevtsova",
     email: "sofika2404@gmail.com",
   },
-  navigation: ["About me", "Skills", "Experience", "Portfolio", "Contacts"],
+  navigation: [["About me", "about"], ["Skills", "skills"], ["Experience", "experience"], ["Portfolio", "portfolio"], ["Contacts", "contacts"]],
 };
 
 export const userUa: User = {
@@ -37,5 +37,5 @@ export const userUa: User = {
     gitHub: "https://github.com/SofiiaShevtsova",
     email: "sofika2404@gmail.com",
   },
-  navigation: ["Це я!", "Навички", "Досвід", "Мої роботи", "Зв'язатися зі мною"],
+  navigation: [["Це я!", "about"], ["Навички", "skills"], ["Досвід", "experience"], ["Мої роботи", "portfolio"], ["Зв'язатися зі мною", "contacts"]],
 };
