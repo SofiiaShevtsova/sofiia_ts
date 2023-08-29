@@ -1,18 +1,18 @@
-type User = {
-  name: string,
-  work: string,
-  phrase: string,
+export type User = {
+  name: string;
+  work: string;
+  phrase: string;
   contacts: {
-    mobilePhone: string,
-    telegram: string,
-    linkedin: string,
-    gitHub: string,
-    email: string,
-  },
-  navigation: string[]
-}
+    mobilePhone: string;
+    telegram: string;
+    linkedin: string;
+    gitHub: string;
+    email: string;
+  };
+  navigation: string[][];
+};
 
-export const userEn:User = {
+export const userEn: User = {
   name: "Sofiia Shevtsova",
   work: "Front-end developer",
   phrase: "Self-development is the way to self-knowledge",
@@ -23,7 +23,7 @@ export const userEn:User = {
     gitHub: "https://github.com/SofiiaShevtsova",
     email: "sofika2404@gmail.com",
   },
-  navigation:["About me", "My projects", "Contacts"],
+  navigation: [["About me", "about"], ["Skills", "skills"], ["Experience", "experience"], ["Portfolio", "portfolio"], ["Contacts", "contacts"]],
 };
 
 export const userUa: User = {
@@ -37,6 +37,5 @@ export const userUa: User = {
     gitHub: "https://github.com/SofiiaShevtsova",
     email: "sofika2404@gmail.com",
   },
-    navigation:["Про мене", "Мої проекти", "Контакти"],
-}
-
+  navigation: [["Це я!", "about"], ["Навички", "skills"], ["Досвід", "experience"], ["Мої роботи", "portfolio"], ["Зв'язатися зі мною", "contacts"]],
+};

@@ -1,11 +1,11 @@
-import { userEn } from "../../service/data"
+import { useContext } from "react";
+import { AppContext } from "../../App";
 
-const Navigation = () => {
+export const Navigation = () => {
+     const { userInfo } = useContext(AppContext);
     return (
-        <nav>
-            {userEn.navigation.map(el =>(<a href="/" key={el}>{el}</a>))}
+        <nav className="navigation">
+            {userInfo?.navigation.map(el =>(<a href={"#"+el[1]} key={el[0]}>{el[0]}</a>))}
       </nav>
     )
 }
-
-export default Navigation

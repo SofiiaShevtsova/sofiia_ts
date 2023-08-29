@@ -1,11 +1,8 @@
-import logo from "../../images/logo.png"
 
-const Logo = () => {
+export const Logo = () => {
     return (
         <>
-            <img src={logo} alt="logo" width='50px'/>
+            <p className="logo">Sofi_Sova</p>
         </>
     )
 }
-
-export default Logo
