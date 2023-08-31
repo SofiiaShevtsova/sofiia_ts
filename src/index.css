@@ -224,7 +224,18 @@ footer .logo {
   background-size: cover;
   background-attachment: fixed;
 
-  color: var(--text-color);
+  display: flex;
+  align-items: flex-end;
+  & .skills-list{
+    display: grid;
+    grid-template-columns: repeat(12, 150px);
+    grid-template-rows: repeat(auto, 100px);
+    gap: 10px;
+    background-color: red;
+    &>*{
+      background-color: rgba(0, 0, 0, 0.11);
+    }
+  }
 }
 
 .toggle-language_btn {
