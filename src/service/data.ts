@@ -6,6 +6,7 @@ export type User = {
   phrase: string;
   aboutMe: string;
   textForCV: string;
+  skills: string[];
   contacts: {
     mobilePhone: string;
     telegram: string;
@@ -24,9 +25,10 @@ export const userEn: User = {
   phrase: "'Self-development is the way to self-knowledge'",
   aboutMe:
     "I like to develop something new, to see how everything changes during the development process. " +
-    "You always want to improve something and make it better. " +
+    "I always want to improve something and make it better. " +
     "I want to become a professional in the field of creating applications. ",
   textForCV: "You can find more information about me in my CV",
+  skills:['HTML'],
   contacts: {
     mobilePhone: "+48 507-755-251",
     telegram: "https://t.me/ShevtsovaSofiia",
@@ -53,7 +55,7 @@ export const userUa: User = {
     "Люблю розробляти щось нове, бачити як все змінюється в процесі розробки. " +
     "Завжди хочеться щось вдосконалити і зробити краще. Хочу стати професіоналом в сфері створення додатків. ",
   textForCV: "Більше інформації про мене знайдете в моєму резюме",
-
+  skills:['HTML'],
   contacts: {
     mobilePhone: "+48 507-755-251",
     telegram: "https://t.me/ShevtsovaSofiia",

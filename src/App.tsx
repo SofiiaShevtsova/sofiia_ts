@@ -1,5 +1,12 @@
 import { useState, createContext } from "react";
-import { About, ButtonText, Container, Footer, Header } from "./components/commons";
+import {
+  About,
+  ButtonText,
+  Container,
+  Footer,
+  Header,
+  Skills,
+} from "./components/commons";
 import { User, userEn, userUa } from "./service/data";
 
 export const AppContext: React.Context<{
@@ -7,21 +14,31 @@ export const AppContext: React.Context<{
 }> = createContext({});
 
 function App() {
-  const [lang, setLang] = useState('ua')
-  
+  const [lang, setLang] = useState("ua");
+
   const changeLang = () => {
-    const langToSet = lang === 'en' ? 'ua' : 'en';
-    setLang(langToSet)
-  }
+    const langToSet = lang === "en" ? "ua" : "en";
+    setLang(langToSet);
+  };
 
   return (
-    <AppContext.Provider value={lang === 'ua'? {userInfo: userEn}: {userInfo: userUa}}>
+    <AppContext.Provider
+      value={lang === "ua" ? { userInfo: userEn } : { userInfo: userUa }}
+    >
       <Header />
       <Container>
-        <About/>
+        <>
+          <About />
+          <Skills />
+        </>
       </Container>
-      <Footer/>
-      <ButtonText text={lang} type={"button"} className={"toggle-language_btn"} onClick={changeLang}/>
+      <Footer />
+      <ButtonText
+        text={lang}
+        type={"button"}
+        className={"toggle-language_btn"}
+        onClick={changeLang}
+      />
     </AppContext.Provider>
   );
 }
