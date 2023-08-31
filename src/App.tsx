@@ -1,5 +1,5 @@
 import { useState, createContext } from "react";
-import { ButtonText, Container, Footer, Header } from "./components/commons";
+import { About, ButtonText, Container, Footer, Header } from "./components/commons";
 import { User, userEn, userUa } from "./service/data";
 
 export const AppContext: React.Context<{
@@ -17,7 +17,9 @@ function App() {
   return (
     <AppContext.Provider value={lang === 'ua'? {userInfo: userEn}: {userInfo: userUa}}>
       <Header />
-      <Container/>
+      <Container>
+        <About/>
+      </Container>
       <Footer/>
       <ButtonText text={lang} type={"button"} className={"toggle-language_btn"} onClick={changeLang}/>
     </AppContext.Provider>
