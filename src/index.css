@@ -44,6 +44,11 @@ code {
   justify-content: space-between;
 }
 
+*::selection {
+  color: var(--text-color);
+  background-color: var(--accent-color);
+}
+
 p,
 h1,
 h2,
@@ -139,8 +144,8 @@ footer .logo {
   padding: 80px 50px 30px;
   background-image: url("./images//main-photo.png");
   background-repeat: no-repeat;
-  background-position: right;
-  background-size: contain;
+  background-position: top 0 right 0;
+  background-size: 45%;
   background-attachment: fixed;
 
   color: var(--text-color);
