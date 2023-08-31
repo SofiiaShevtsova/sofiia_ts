@@ -11,9 +11,9 @@ export const About = () => {
         <h1 className="hidden">{userInfo.name}</h1>
         <div className="name">
           <p>
-            {userInfo.about[0]}
-            <span>{userInfo.about[1]}</span>
-            {userInfo.about[2]}
+            {userInfo.mainText[0]}
+            <span>{userInfo.mainText[1]}</span>
+            {userInfo.mainText[2]}
           </p>
           <p>
             {userInfo.name}
@@ -22,9 +22,13 @@ export const About = () => {
         </div>
         <p className="position">{userInfo.work}</p>
         <div className="information">
-          <Logo />
-          <p></p>
-          <a href="../../images/Sofiia_Shevtsova_CV.pdf" download>
+                <Logo />
+                <div className="about-me">
+                    <p>{userInfo.phrase}</p>
+                    <p>{userInfo.aboutMe}</p>
+                    <p>{ userInfo.textForCV} &#128521;</p>
+                </div>
+          <a className="download" href="../../images/Sofiia_Shevtsova_CV.pdf" download>
             {userInfo.downloadBtn}
           </a>
         </div>

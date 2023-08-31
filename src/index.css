@@ -57,6 +57,7 @@ li {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 .hidden {
   position: absolute;
@@ -123,7 +124,7 @@ footer .logo {
   & * {
     color: var(--text-navigation);
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
-    transition: all 0.5s linear;
+    transition: var(--transition-function)
   }
   & *:hover {
     transform: scale(1.2);
@@ -162,15 +163,44 @@ footer .logo {
   & .information {
     position: relative;
     margin: 150px auto;
-    padding: 20px;
+    padding: 50px 20px;
     width: 75%;
     min-height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     background-color: var(--background-dark);
     border-radius: 5px;
+  }
+
+  & .about-me{
+    width: 80%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color:  var(--text-color);
+    font-size: 20px;
+  }
+
+  & .download{
+    display: block;
+    min-width: 150px;
+    padding: 10px 20px;
+    border: 1px solid var(--background-main);
+    border-radius: 20px;
+    text-align: center;
+    transition: var(--transition-function);
+    font-weight: 600;
+
+    &:hover{
+      border: 1px solid var(--accent-color);
+      color: var(--accent-color);
+      background-color: var(--background-main);
+    }
+    
   }
 }
 
