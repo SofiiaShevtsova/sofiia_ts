@@ -226,15 +226,36 @@ footer .logo {
 
   display: flex;
   align-items: flex-end;
-  & .skills-list{
-    display: grid;
-    grid-template-columns: repeat(12, 150px);
-    grid-template-rows: repeat(auto, 100px);
+
+  & .skills-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
-    background-color: red;
-    &>*{
-      background-color: rgba(0, 0, 0, 0.11);
+  }
+  & .skills-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    &:last-child {
+      width: 80%;
+      & > * {
+        padding: 20px 50px;
+        background-color: rgba(0, 80, 0, 0.8);
+      }
     }
+  }
+  & .skills-box {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--accent-color);
+    border: 1px solid var(--background-dark);
+    font-size: 20px;
+    color: var(--text-color);
+    animation-name: animateSkills;
+    animation-duration: 4000ms;
+    animation-timing-function: linear;
   }
 }
 
@@ -270,5 +291,17 @@ footer .logo {
 
   100% {
     transform: rotate(10deg);
+  }
+}
+
+@keyframes animateSkills {
+  0% {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
