@@ -6,3 +6,4 @@ export { ButtonText } from './Button/ButtonText.tsx';
 export { Container } from './Container/Container.tsx';
 export { About } from './About/About.tsx';
 export { Skills } from './Skills/Skills.tsx';
+export { Experience } from './Experience/Experience.tsx';

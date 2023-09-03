@@ -259,6 +259,21 @@ footer .logo {
   }
 }
 
+#experience {
+  min-height: 100vh;
+  padding: 30px 50px;
+  background-image: linear-gradient(rgba(68, 59, 59, 0.5),
+      rgba(112, 112, 112, 0.5)),
+    url("./images/experience.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: flex-end;
+  }
+
 .toggle-language_btn {
   position: fixed;
   bottom: 10px;

@@ -3,6 +3,7 @@ import {
   About,
   ButtonText,
   Container,
+  Experience,
   Footer,
   Header,
   Skills,
@@ -30,6 +31,7 @@ function App() {
         <>
           <About />
           <Skills />
+          <Experience/>
         </>
       </Container>
       <Footer />
