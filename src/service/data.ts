@@ -28,7 +28,7 @@ export const userEn: User = {
     "I always want to improve something and make it better. " +
     "I want to become a professional in the field of creating applications. ",
   textForCV: "You can find more information about me in my CV",
-  skills:[['MongoBD', 'SQL', 'NodeJS'], ['SASS', 'TypeScript', 'React', 'Redux'], ['HTML', 'CSS', 'JavaScript']],
+  skills:[['Styled-component'],['Formik', 'Chakra UI'],['MongoBD', 'SQL', 'NodeJS'], ['SASS', 'TypeScript', 'React', 'Redux'], ['HTML', 'CSS', 'JavaScript']],
   contacts: {
     mobilePhone: "+48 507-755-251",
     telegram: "https://t.me/ShevtsovaSofiia",
@@ -55,7 +55,7 @@ export const userUa: User = {
     "Люблю розробляти щось нове, бачити як все змінюється в процесі розробки. " +
     "Завжди хочеться щось вдосконалити і зробити краще. Хочу стати професіоналом в сфері створення додатків. ",
   textForCV: "Більше інформації про мене знайдете в моєму резюме",
-  skills:[['MongoBD', 'SQL', 'NodeJS'], ['SASS', 'TypeScript', 'React', 'Redux'], ['HTML', 'CSS', 'JavaScript']],
+  skills:[['Styled-component'],['Formik', 'Chakra UI'],['MongoBD', 'SQL', 'NodeJS'], ['SASS', 'TypeScript', 'React', 'Redux'], ['HTML', 'CSS', 'JavaScript']],
   contacts: {
     mobilePhone: "+48 507-755-251",
     telegram: "https://t.me/ShevtsovaSofiia",
