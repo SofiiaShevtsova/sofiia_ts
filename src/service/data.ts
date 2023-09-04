@@ -7,6 +7,7 @@ export type User = {
   aboutMe: string;
   textForCV: string;
   skills: string[][];
+  experience: string[][];
   contacts: {
     mobilePhone: string;
     telegram: string;
@@ -28,7 +29,19 @@ export const userEn: User = {
     "I always want to improve something and make it better. " +
     "I want to become a professional in the field of creating applications. ",
   textForCV: "You can find more information about me in my CV",
-  skills:[['Styled-component'],['Formik', 'Chakra UI'],['MongoBD', 'SQL', 'NodeJS'], ['SASS', 'TypeScript', 'React', 'Redux'], ['HTML', 'CSS', 'JavaScript']],
+  skills: [
+    ["Styled-component"],
+    ["Formik", "Chakra UI"],
+    ["MongoBD", "SQL", "NodeJS"],
+    ["SASS", "TypeScript", "React", "Redux"],
+    ["HTML", "CSS", "JavaScript"],
+  ],
+  experience: [
+    ["Academy GO IT", "from August 2022 to April 2023"],
+    ["Brainnest", "from April 2023 to May 2023"],
+    ["Binary Studio Academy", "from June 2023 to August 2023"],
+    ["New experience", "soon"],
+  ],
   contacts: {
     mobilePhone: "+48 507-755-251",
     telegram: "https://t.me/ShevtsovaSofiia",
@@ -55,7 +68,19 @@ export const userUa: User = {
     "Люблю розробляти щось нове, бачити як все змінюється в процесі розробки. " +
     "Завжди хочеться щось вдосконалити і зробити краще. Хочу стати професіоналом в сфері створення додатків. ",
   textForCV: "Більше інформації про мене знайдете в моєму резюме",
-  skills:[['Styled-component'],['Formik', 'Chakra UI'],['MongoBD', 'SQL', 'NodeJS'], ['SASS', 'TypeScript', 'React', 'Redux'], ['HTML', 'CSS', 'JavaScript']],
+  skills: [
+    ["Styled-component"],
+    ["Formik", "Chakra UI"],
+    ["MongoBD", "SQL", "NodeJS"],
+    ["SASS", "TypeScript", "React", "Redux"],
+    ["HTML", "CSS", "JavaScript"],
+  ],
+  experience: [
+    ["Academy GO IT", "серпень 2022 - квітень 2023"],
+    ["Brainnest", "квітень 2023 - травень 2023"],
+    ["Binary Studio Academy", "червень 2023 - серпень 2023"],
+    ["Нові круті курси", "скоро"],
+  ],
   contacts: {
     mobilePhone: "+48 507-755-251",
     telegram: "https://t.me/ShevtsovaSofiia",
