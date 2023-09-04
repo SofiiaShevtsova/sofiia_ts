@@ -2,10 +2,12 @@ import { useState, createContext } from "react";
 import {
   About,
   ButtonText,
+  Contacts,
   Container,
   Experience,
   Footer,
   Header,
+  Portfolio,
   Skills,
 } from "./components/commons";
 import { User, userEn, userUa } from "./service/data";
@@ -31,7 +33,9 @@ function App() {
         <>
           <About />
           <Skills />
-          <Experience/>
+          <Experience />
+          <Portfolio />
+          <Contacts/>
         </>
       </Container>
       <Footer />

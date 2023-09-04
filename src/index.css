@@ -81,7 +81,11 @@ a {
 }
 
 header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -170,7 +174,7 @@ footer .logo {
   }
   & .information {
     position: relative;
-    z-index: 3;
+    z-index: 2;
     margin: 150px auto;
     padding: 50px 20px;
     width: 75%;
