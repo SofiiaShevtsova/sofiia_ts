@@ -37,10 +37,10 @@ export const userEn: User = {
     ["HTML", "CSS", "JavaScript"],
   ],
   experience: [
-    ["Academy GO IT", "from August 2022 to April 2023"],
-    ["Brainnest", "from April 2023 to May 2023"],
+    ["Сool new courses", "soon"],
     ["Binary Studio Academy", "from June 2023 to August 2023"],
-    ["New experience", "soon"],
+    ["Brainnest", "from April 2023 to May 2023"],
+    ["Academy GO IT", "from August 2022 to April 2023"],
   ],
   contacts: {
     mobilePhone: "+48 507-755-251",
@@ -76,10 +76,10 @@ export const userUa: User = {
     ["HTML", "CSS", "JavaScript"],
   ],
   experience: [
-    ["Academy GO IT", "серпень 2022 - квітень 2023"],
-    ["Brainnest", "квітень 2023 - травень 2023"],
-    ["Binary Studio Academy", "червень 2023 - серпень 2023"],
     ["Нові круті курси", "скоро"],
+    ["Binary Studio Academy", "червень 2023 - серпень 2023"],
+    ["Brainnest", "квітень 2023 - травень 2023"],
+    ["Academy GO IT", "серпень 2022 - квітень 2023"],
   ],
   contacts: {
     mobilePhone: "+48 507-755-251",

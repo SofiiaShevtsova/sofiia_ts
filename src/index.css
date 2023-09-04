@@ -95,6 +95,7 @@ main {
 
 footer {
   display: flex;
+  height: 10%;
   gap: 10px;
   justify-content: center;
   align-items: center;
@@ -260,19 +261,66 @@ footer .logo {
 }
 
 #experience {
-  min-height: 100vh;
-  padding: 30px 50px;
-  background-image: linear-gradient(rgba(68, 59, 59, 0.5),
-      rgba(112, 112, 112, 0.5)),
+  min-height: 90vh;
+  background-image: linear-gradient(
+      rgba(68, 59, 59, 0.5),
+      rgba(112, 112, 112, 0.5)
+    ),
     url("./images/experience.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
 
   display: flex;
   align-items: flex-end;
+
+  & .experience-list {
+    width: 1200px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    justify-content: flex-end;
+    margin-bottom: 100px;
   }
+
+  & .experience-item {
+    & > p {
+      display: inline;
+    }
+    &:first-child {
+      margin-left: 200px;
+    }
+    &:nth-child(2) {
+      margin-left: 300px;
+    }
+    &:nth-child(3) {
+      margin-left: 600px;
+    }
+    &:last-child {
+      margin-left: auto;
+    }
+  }
+
+  & .company {
+    color: var(--text-navigation);
+    font-size: 20px;
+  }
+
+  & .duration {
+    color: var(--text-color);
+    font-size: 18px;
+  }
+  & .company::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    margin: 0 85px;
+  }
+}
 
 .toggle-language_btn {
   position: fixed;
