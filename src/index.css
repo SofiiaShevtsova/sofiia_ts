@@ -255,9 +255,6 @@ footer .logo {
     border: 1px solid var(--background-dark);
     font-size: 20px;
     color: var(--text-color);
-    animation-name: animateSkills;
-    animation-duration: 4000ms;
-    animation-timing-function: linear;
   }
 }
 
@@ -355,17 +352,5 @@ footer .logo {
 
   100% {
     transform: rotate(10deg);
-  }
-}
-
-@keyframes animateSkills {
-  0% {
-    transform: translateY(-300px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
   }
 }

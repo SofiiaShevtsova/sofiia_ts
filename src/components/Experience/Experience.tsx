@@ -18,6 +18,10 @@ export const Experience = () => {
           x: 0,
           opacity: 1,
         },
+        delay: 500,
+        config: {
+         tension: 170, friction: 60 
+        }
       });
     }
     setStart(true);
