@@ -20,6 +20,7 @@ export const Skills = () => {
               <li className="skills-row" key={el[0] + "1"}>
                 {el.map((skill, i) => (
                   <Spring
+                    key={skill}
                     from={{ y: -500, opacity: 0 }}
                     to={{ y: 0, opacity: 1 }}
                     delay={500 * i}
@@ -28,7 +29,6 @@ export const Skills = () => {
                     {(style: any) => (
                       <animated.p
                         className="skills-box"
-                        key={skill}
                         style={style}
                       >
                         {skill}
