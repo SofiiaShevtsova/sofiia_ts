@@ -16,14 +16,14 @@ export const Skills = () => {
         <h2 className="hidden">Skills</h2>
         {start && (
           <ul className="skills-list">
-            {userInfo.skills.map((el) => (
+            {userInfo.skills.map((el: string[], ind: number) => (
               <li className="skills-row" key={el[0] + "1"}>
-                {el.map((skill, i) => (
+                {el.map((skill: string, i: number) => (
                   <Spring
                     key={skill}
                     from={{ y: -500, opacity: 0 }}
                     to={{ y: 0, opacity: 1 }}
-                    delay={500 * i}
+                    delay={250 * (i + ind)}
                     config={{ tension: 170, friction: 60 }}
                   >
                     {(style: any) => (
