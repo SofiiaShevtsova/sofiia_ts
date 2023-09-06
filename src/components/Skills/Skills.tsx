@@ -1,18 +1,14 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { AppContext } from "../../App";
 import { animated, Spring } from "@react-spring/web";
 
-export const Skills = () => {
+export const Skills = ({start}: {start: boolean}) => {
   const { userInfo } = useContext(AppContext);
-  const [start, setStart] = useState(false);
 
-  const startAnimation = () => {
-    setStart(true);
-  };
 
   return (
     userInfo && (
-      <section id={userInfo.navigation[1][1]} onMouseEnter={startAnimation}>
+      <section id={userInfo.navigation[1][1]}>
         <h2 className="hidden">Skills</h2>
         {start && (
           <ul className="skills-list">

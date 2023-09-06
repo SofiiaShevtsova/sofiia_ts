@@ -3,6 +3,7 @@ type MainProps = {
 };
 
 export const Container = ({ children }: MainProps) => {
+
     return (<main className="main">
         {children}
     </main>)
