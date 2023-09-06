@@ -1,17 +1,11 @@
 @import-normalize;
 
 :root {
-  /* --icon-defoult-color: rgb(180, 180, 180);
-  --icon-active-color: rgb(100, 100, 100);
-  --link-icon-color: rgb(20, 20, 20);
-  --icon-hover-color: rgb(10, 80, 160);
-  --border-color: rgb(210, 210, 210); */
   --accent-color: rgba(0, 128, 0, 0.5);
   --background-main: rgb(255, 255, 255);
   --background-dark: rgb(100, 100, 100);
   --text-navigation: rgba(170, 170, 170, 0.8);
   --text-color: rgba(255, 255, 255, 0.8);
-  /* --red-color: rgb(255, 0, 0); */
 
   --font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     sans-serif;
@@ -27,6 +21,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 code {
@@ -51,14 +46,16 @@ code {
   background-color: var(--accent-color);
 }
 
-p,
+img,
 h1,
 h2,
 h3,
+p,
 ul,
-li {
-  margin: 0;
+li,
+section {
   padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -66,6 +63,21 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 20px;
+}
+
 .hidden {
   position: absolute;
   width: 1px;
@@ -80,13 +92,21 @@ a {
   overflow: hidden;
 }
 
+.wrapper{
+  height: 100vh;
+  overflow-y: auto;
+}
+
 header {
   position: relative;
+  width: 100%;
+  height: 15vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 60px;
   box-shadow: inset 0 -8px 10px 1px rgb(150, 150, 150);
+  background-color: transparent;
 }
 
 main {
@@ -95,6 +115,7 @@ main {
 
 footer {
   display: flex;
+  height: 10vh;
   gap: 10px;
   justify-content: center;
   align-items: center;
@@ -169,7 +190,7 @@ footer .logo {
   }
   & .information {
     position: relative;
-    z-index: 3;
+    z-index: 2;
     margin: 150px auto;
     padding: 50px 20px;
     width: 75%;
@@ -253,16 +274,75 @@ footer .logo {
     border: 1px solid var(--background-dark);
     font-size: 20px;
     color: var(--text-color);
-    animation-name: animateSkills;
-    animation-duration: 4000ms;
-    animation-timing-function: linear;
+  }
+}
+
+#experience {
+  min-height: 100vh;
+  background-image: linear-gradient(
+      rgba(68, 59, 59, 0.5),
+      rgba(112, 112, 112, 0.5)
+    ),
+    url("./images/experience.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  align-items: flex-end;
+
+  & .experience-list {
+    width: 1200px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    justify-content: flex-end;
+    margin-bottom: 100px;
+  }
+
+  & .experience-item {
+    & > p {
+      display: inline;
+    }
+    &:first-child {
+      margin-left: 200px;
+    }
+    &:nth-child(2) {
+      margin-left: 300px;
+    }
+    &:nth-child(3) {
+      margin-left: 600px;
+    }
+    &:last-child {
+      margin-left: auto;
+    }
+  }
+
+  & .company {
+    color: var(--text-navigation);
+    font-size: 20px;
+  }
+
+  & .duration {
+    color: var(--text-color);
+    font-size: 18px;
+  }
+  & .company::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    margin: 0 85px;
   }
 }
 
 .toggle-language_btn {
   position: fixed;
   bottom: 10px;
-  right: 10px;
+  right: 30px;
   display: block;
   font-size: 20px;
   background-color: var(--accent-color);
@@ -291,17 +371,5 @@ footer .logo {
 
   100% {
     transform: rotate(10deg);
-  }
-}
-
-@keyframes animateSkills {
-  0% {
-    transform: translateY(-300px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
