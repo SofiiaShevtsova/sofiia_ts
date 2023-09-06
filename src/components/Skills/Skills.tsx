@@ -19,7 +19,7 @@ export const Skills = ({start}: {start: boolean}) => {
                     key={skill}
                     from={{ y: -500, opacity: 0 }}
                     to={{ y: 0, opacity: 1 }}
-                    delay={250 * (i + ind)}
+                    delay={50 * (i + ind)}
                     config={{ tension: 170, friction: 60 }}
                   >
                     {(style: any) => (

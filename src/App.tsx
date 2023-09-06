@@ -37,10 +37,10 @@ function App() {
 
   const scrollHandler = (e: any) => {
     const topHeight = e.nativeEvent.srcElement.scrollTop;
-    if (topHeight > 800 && topHeight < 1200) {
+    if (topHeight > 600 && topHeight < 1200) {
       !skillsStart && setSkills(true);
     }
-    if (topHeight > 1300 && topHeight < 1700) {
+    if (topHeight > 1100 && topHeight < 1700) {
       !experienceStart && setExperience(true);
     }
   };
