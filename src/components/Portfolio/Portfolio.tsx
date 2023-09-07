@@ -9,33 +9,35 @@ export const Portfolio = () => {
   return (
     userInfo && (
       <section id={userInfo.navigation[3][1]}>
-        <h2 className="hidden">{userInfo.navigation[3][0]}</h2>
-        <Carousel
-          autoPlay={true}
-          stopOnHover={true}
-          centerMode={true}
-          showThumbs={false}
-          infiniteLoop={true}
-          showArrows={false}
-          showStatus={false}
-        >
-          <div>
-            <img src={photo} alt="logo" className="carousel-image" />
-            <p className="legend">Legend 1</p>
-          </div>
-          <div>
-            <img src={photo} alt="logo" className="carousel-image" />
-            <p className="legend">Legend 2</p>
-          </div>
-          <div>
-            <img src={photo} alt="logo" className="carousel-image" />
-            <p className="legend">Legend 3</p>
-          </div>
-          <div>
-            <img src={photo} alt="logo" className="carousel-image" />
-            <p className="legend">Legend 4</p>
-          </div>
-        </Carousel>
+        <div className="carousel-box">
+          <h2 className="title">{userInfo.navigation[3][0]}</h2>
+
+          <Carousel
+            autoPlay={true}
+            stopOnHover={true}
+            centerMode={true}
+            showThumbs={false}
+            infiniteLoop={true}
+            showStatus={false}
+          >
+            <div>
+              <img src={photo} alt="logo" className="carousel-image" />
+              <p className="legend">Legend 1</p>
+            </div>
+            <div>
+              <img src={photo} alt="logo" className="carousel-image" />
+              <p className="legend">Legend 2</p>
+            </div>
+            <div>
+              <img src={photo} alt="logo" className="carousel-image" />
+              <p className="legend">Legend 3</p>
+            </div>
+            <div>
+              <img src={photo} alt="logo" className="carousel-image" />
+              <p className="legend">Legend 4</p>
+            </div>
+          </Carousel>
+        </div>
       </section>
     )
   );
