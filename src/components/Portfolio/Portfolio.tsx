@@ -1,40 +1,41 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { AppContext } from "../../App";
-import { useSpring, animated } from "@react-spring/web";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import photo from "../../images/experience.jpg";
 
 export const Portfolio = () => {
   const { userInfo } = useContext(AppContext);
-  const [start, setStart] = useState(false);
-  const [springs, api] = useSpring(() => ({ from: { x: -500, opacity: 0 } }));
-
-  const handleShow = () => {
-    if (!start) {
-      api.start({
-        from: {
-          x: -500,
-          opacity: 0,
-        },
-        to: {
-          x: 0,
-          opacity: 1,
-        },
-      });
-    }
-    setStart(true);
-  };
-
   return (
     userInfo && (
-      <section id={userInfo.navigation[3][1]} onMouseEnter={handleShow}>
-        <h2 className="hidden">Experience</h2>
-        <animated.ul className="experience-list" style={{ ...springs }}>
-          {userInfo.experience.map((el) => (
-            <li className="experience-item" key={el[0]}>
-              <p className="company">{el[0]}</p>
-              <p className="duration">{el[1]}</p>
-            </li>
-          ))}
-        </animated.ul>
+      <section id={userInfo.navigation[3][1]}>
+        <h2 className="hidden">{userInfo.navigation[3][0]}</h2>
+        <Carousel
+          autoPlay={true}
+          stopOnHover={true}
+          centerMode={true}
+          showThumbs={false}
+          infiniteLoop={true}
+          showArrows={false}
+          showStatus={false}
+        >
+          <div>
+            <img src={photo} alt="logo" className="carousel-image" />
+            <p className="legend">Legend 1</p>
+          </div>
+          <div>
+            <img src={photo} alt="logo" className="carousel-image" />
+            <p className="legend">Legend 2</p>
+          </div>
+          <div>
+            <img src={photo} alt="logo" className="carousel-image" />
+            <p className="legend">Legend 3</p>
+          </div>
+          <div>
+            <img src={photo} alt="logo" className="carousel-image" />
+            <p className="legend">Legend 4</p>
+          </div>
+        </Carousel>
       </section>
     )
   );

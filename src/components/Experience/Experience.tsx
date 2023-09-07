@@ -8,7 +8,7 @@ export const Experience = ({ start }: { start: boolean }) => {
   return (
     userInfo && (
       <section id={userInfo.navigation[2][1]}>
-        <h2 className="hidden">Experience</h2>
+        <h2 className="hidden">{userInfo.navigation[2][0]}</h2>
         {start && (
           <Spring
             from={{ x: -500, opacity: 0 }}

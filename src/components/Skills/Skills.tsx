@@ -9,7 +9,7 @@ export const Skills = ({start}: {start: boolean}) => {
   return (
     userInfo && (
       <section id={userInfo.navigation[1][1]}>
-        <h2 className="hidden">Skills</h2>
+        <h2 className="hidden">{userInfo.navigation[1][0]}</h2>
         {start && (
           <ul className="skills-list">
             {userInfo.skills.map((el: string[], ind: number) => (
