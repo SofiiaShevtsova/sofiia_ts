@@ -1,3 +1,5 @@
+import travelApp from '../images/travel-app.png';
+
 export type User = {
   name: string;
   work: string;
@@ -8,6 +10,11 @@ export type User = {
   textForCV: string;
   skills: string[][];
   experience: string[][];
+  portfolio: {
+    imageURL: string;
+    name: string;
+    link: string;
+  }[];
   contacts: {
     mobilePhone: string;
     telegram: string;
@@ -41,6 +48,23 @@ export const userEn: User = {
     ["Binary Studio Academy", "from June 2023 to August 2023"],
     ["Brainnest", "from April 2023 to May 2023"],
     ["Academy GO IT", "from August 2022 to April 2023"],
+  ],
+  portfolio: [
+    {
+      imageURL: travelApp,
+      name: "Travel-app",
+      link: "https://dulcet-dodol-f6ff6a.netlify.app/",
+    },
+    {
+      imageURL: travelApp,
+      name: "Travel-app",
+      link: "https://dulcet-dodol-f6ff6a.netlify.app/",
+    },
+    {
+      imageURL: travelApp,
+      name: "Travel-app",
+      link: "https://dulcet-dodol-f6ff6a.netlify.app/",
+    },
   ],
   contacts: {
     mobilePhone: "+48 507-755-251",
@@ -81,6 +105,14 @@ export const userUa: User = {
     ["Brainnest", "квітень 2023 - травень 2023"],
     ["Academy GO IT", "серпень 2022 - квітень 2023"],
   ],
+  portfolio: [
+    {
+      imageURL: "../../images/travel-app.png",
+      name: "Бронювання подорожей",
+      link: "https://dulcet-dodol-f6ff6a.netlify.app/",
+    },
+  ],
+
   contacts: {
     mobilePhone: "+48 507-755-251",
     telegram: "https://t.me/ShevtsovaSofiia",

@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { AppContext } from "../../App";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import photo from "../../images/experience.jpg";
 
 export const Portfolio = () => {
   const { userInfo } = useContext(AppContext);
@@ -20,22 +19,19 @@ export const Portfolio = () => {
             infiniteLoop={true}
             showStatus={false}
           >
-            <div>
-              <img src={photo} alt="logo" className="carousel-image" />
-              <p className="legend">Legend 1</p>
-            </div>
-            <div>
-              <img src={photo} alt="logo" className="carousel-image" />
-              <p className="legend">Legend 2</p>
-            </div>
-            <div>
-              <img src={photo} alt="logo" className="carousel-image" />
-              <p className="legend">Legend 3</p>
-            </div>
-            <div>
-              <img src={photo} alt="logo" className="carousel-image" />
-              <p className="legend">Legend 4</p>
-            </div>
+            {userInfo &&
+              userInfo.portfolio.map((project) => (
+                <div key={project.name}>
+                  <img
+                    src={project.imageURL}
+                    alt="logo"
+                    className="carousel-image"
+                  />
+                  <a href={project.link} target="_blank" rel="noreferrer">
+                    <p className="legend">{project.name}</p>
+                  </a>
+                </div>
+              ))}
           </Carousel>
         </div>
       </section>
