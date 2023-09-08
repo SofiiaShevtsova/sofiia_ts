@@ -1,4 +1,9 @@
-import travelApp from '../images/travel-app.png';
+import travelApp from "../images/travel-app.png";
+import food from "../images/food.png";
+import game from "../images/game.png";
+import cake from "../images/cake.png";
+import iceCream from "../images/ice-cream.png";
+import movies from "../images/movies.png";
 
 export type User = {
   name: string;
@@ -56,14 +61,29 @@ export const userEn: User = {
       link: "https://dulcet-dodol-f6ff6a.netlify.app/",
     },
     {
-      imageURL: travelApp,
-      name: "Travel-app",
-      link: "https://dulcet-dodol-f6ff6a.netlify.app/",
+      imageURL: movies,
+      name: "Movies",
+      link: "https://sofiiashevtsova.github.io/films_list/",
     },
     {
-      imageURL: travelApp,
-      name: "Travel-app",
-      link: "https://dulcet-dodol-f6ff6a.netlify.app/",
+      imageURL: game,
+      name: "Little game",
+      link: "https://sofiiashevtsova.github.io/brainnest_JS/pages/shipsBattle.html",
+    },
+    {
+      imageURL: food,
+      name: "Food-app",
+      link: "https://loki99911.github.io/Node.JS_Project_Front/main",
+    },
+    {
+      imageURL: cake,
+      name: "Bobrus-cake",
+      link: "https://sofiiashevtsova.github.io/Bobrus-cake/",
+    },
+    {
+      imageURL: iceCream,
+      name: "Ice-cream",
+      link: "https://sofiiashevtsova.github.io/project4/",
     },
   ],
   contacts: {
@@ -107,9 +127,35 @@ export const userUa: User = {
   ],
   portfolio: [
     {
-      imageURL: "../../images/travel-app.png",
-      name: "Бронювання подорожей",
+      imageURL: travelApp,
+      name: "Подорожі",
       link: "https://dulcet-dodol-f6ff6a.netlify.app/",
+    },
+    {
+      imageURL: movies,
+      name: "Фільми",
+      link: "https://sofiiashevtsova.github.io/films_list/",
+    },
+
+    {
+      imageURL: game,
+      name: "Ігри",
+      link: "https://sofiiashevtsova.github.io/brainnest_JS/pages/shipsBattle.html",
+    },
+    {
+      imageURL: food,
+      name: "Їжа",
+      link: "https://loki99911.github.io/Node.JS_Project_Front/",
+    },
+    {
+      imageURL: cake,
+      name: "Тортики",
+      link: "https://sofiiashevtsova.github.io/Bobrus-cake/",
+    },
+    {
+      imageURL: iceCream,
+      name: "Морозивко",
+      link: "https://sofiiashevtsova.github.io/project4/",
     },
   ],
 
