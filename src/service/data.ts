@@ -1,3 +1,10 @@
+import travelApp from "../images/travel-app.png";
+import food from "../images/food.png";
+import game from "../images/game.png";
+import cake from "../images/cake.png";
+import iceCream from "../images/ice-cream.png";
+import movies from "../images/movies.png";
+
 export type User = {
   name: string;
   work: string;
@@ -8,6 +15,11 @@ export type User = {
   textForCV: string;
   skills: string[][];
   experience: string[][];
+  portfolio: {
+    imageURL: string;
+    name: string;
+    link: string;
+  }[];
   contacts: {
     mobilePhone: string;
     telegram: string;
@@ -41,6 +53,38 @@ export const userEn: User = {
     ["Binary Studio Academy", "from June 2023 to August 2023"],
     ["Brainnest", "from April 2023 to May 2023"],
     ["Academy GO IT", "from August 2022 to April 2023"],
+  ],
+  portfolio: [
+    {
+      imageURL: travelApp,
+      name: "Travel-app",
+      link: "https://dulcet-dodol-f6ff6a.netlify.app/",
+    },
+    {
+      imageURL: movies,
+      name: "Movies",
+      link: "https://sofiiashevtsova.github.io/films_list/",
+    },
+    {
+      imageURL: game,
+      name: "Little game",
+      link: "https://sofiiashevtsova.github.io/brainnest_JS/pages/shipsBattle.html",
+    },
+    {
+      imageURL: food,
+      name: "Food-app",
+      link: "https://loki99911.github.io/Node.JS_Project_Front/main",
+    },
+    {
+      imageURL: cake,
+      name: "Bobrus-cake",
+      link: "https://sofiiashevtsova.github.io/Bobrus-cake/",
+    },
+    {
+      imageURL: iceCream,
+      name: "Ice-cream",
+      link: "https://sofiiashevtsova.github.io/project4/",
+    },
   ],
   contacts: {
     mobilePhone: "+48 507-755-251",
@@ -81,6 +125,40 @@ export const userUa: User = {
     ["Brainnest", "квітень 2023 - травень 2023"],
     ["Academy GO IT", "серпень 2022 - квітень 2023"],
   ],
+  portfolio: [
+    {
+      imageURL: travelApp,
+      name: "Подорожі",
+      link: "https://dulcet-dodol-f6ff6a.netlify.app/",
+    },
+    {
+      imageURL: movies,
+      name: "Фільми",
+      link: "https://sofiiashevtsova.github.io/films_list/",
+    },
+
+    {
+      imageURL: game,
+      name: "Ігри",
+      link: "https://sofiiashevtsova.github.io/brainnest_JS/pages/shipsBattle.html",
+    },
+    {
+      imageURL: food,
+      name: "Їжа",
+      link: "https://loki99911.github.io/Node.JS_Project_Front/",
+    },
+    {
+      imageURL: cake,
+      name: "Тортики",
+      link: "https://sofiiashevtsova.github.io/Bobrus-cake/",
+    },
+    {
+      imageURL: iceCream,
+      name: "Морозивко",
+      link: "https://sofiiashevtsova.github.io/project4/",
+    },
+  ],
+
   contacts: {
     mobilePhone: "+48 507-755-251",
     telegram: "https://t.me/ShevtsovaSofiia",

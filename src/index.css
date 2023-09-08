@@ -2,10 +2,12 @@
 
 :root {
   --accent-color: rgba(0, 128, 0, 0.5);
+  --accent-dark: rgba(0, 128, 0, 0.8);
   --background-main: rgb(255, 255, 255);
   --background-dark: rgb(100, 100, 100);
   --text-navigation: rgba(170, 170, 170, 0.8);
   --text-color: rgba(255, 255, 255, 0.8);
+  --text-dark: rgb(0, 0, 0);
 
   --font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     sans-serif;
@@ -46,7 +48,6 @@ code {
   background-color: var(--accent-color);
 }
 
-img,
 h1,
 h2,
 h3,
@@ -57,6 +58,9 @@ section {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+img {
+  display: block;
 }
 
 a {
@@ -92,9 +96,10 @@ a {
   overflow: hidden;
 }
 
-.wrapper{
+.wrapper {
   height: 100vh;
   overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -296,9 +301,9 @@ footer .logo {
     height: 500px;
     display: flex;
     flex-direction: column;
-    gap: 100px;
-    justify-content: flex-end;
-    margin-bottom: 100px;
+    gap: 70px;
+    justify-content: flex-start;
+    margin-top: 100px;
   }
 
   & .experience-item {
@@ -309,13 +314,13 @@ footer .logo {
       margin-left: 200px;
     }
     &:nth-child(2) {
-      margin-left: 300px;
+      margin-left: 250px;
     }
     &:nth-child(3) {
-      margin-left: 600px;
+      margin-left: 500px;
     }
     &:last-child {
-      margin-left: auto;
+      margin-left: 600px;
     }
   }
 
@@ -337,6 +342,65 @@ footer .logo {
     background-color: var(--accent-color);
     margin: 0 85px;
   }
+}
+
+#portfolio {
+  position: relative;
+  height: 0;
+  width: 80%;
+  margin: -150px auto 0;
+
+  & .title{
+    font-size: 24px;
+    text-align: center;
+    color: inherit;
+    margin-bottom: 30px;
+  }
+
+  & > .carousel-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--accent-color);
+    box-shadow: 8px 8px 24px 0px var(--background-dark);
+    color: var(--text-navigation);
+
+    &:hover{
+      color: var(--text-color);
+    }
+
+    & .slide {
+      transform: scale(0.9);
+    }
+
+    & .selected.slide {
+      transform: scale(1);
+    }
+  }
+
+  & .carousel-image {
+    max-height: 80vh;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  & .legend{
+    background-color: var(--accent-dark);
+    color: var(--text-color);
+    font-size: 20px;
+
+  }
+}
+
+#contacts {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .toggle-language_btn {
