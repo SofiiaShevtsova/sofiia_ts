@@ -18,20 +18,24 @@ export const Contacts = () => {
           x: 0,
           opacity: 1,
         },
+        delay: 1000,
       });
     }
     setStart(true);
   };
 
+  const contactsArray = userInfo ? Object.entries(userInfo.contacts) : [];  
+
   return (
     userInfo && (
       <section id={userInfo.navigation[4][1]} onMouseEnter={handleShow}>
-        <h2 className="hidden">Experience</h2>
-        <animated.ul className="experience-list" style={{ ...springs }}>
-          {userInfo.experience.map((el) => (
+        <h2 className="hidden">{userInfo.navigation[4][0]}</h2>
+        <animated.ul className="contacts-list" style={{ ...springs }}>
+          {contactsArray.map((el) => (
             <li className="experience-item" key={el[0]}>
-              <p className="company">{el[0]}</p>
-              <p className="duration">{el[1]}</p>
+              <a href={el[1].value} className="contacts-link">
+                {el[1].icon}
+              </a>
             </li>
           ))}
         </animated.ul>

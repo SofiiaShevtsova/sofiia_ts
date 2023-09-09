@@ -31,18 +31,6 @@ code {
     monospace;
 }
 
-#root {
-  background-image: linear-gradient(
-    rgb(68, 59, 59, 0.8),
-    rgb(112, 112, 112, 0.8)
-  );
-  min-height: 100vh;
-  font-family: var(--font-family);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 *::selection {
   color: var(--text-color);
   background-color: var(--accent-color);
@@ -100,6 +88,14 @@ a {
   height: 100vh;
   overflow-y: auto;
   scroll-behavior: smooth;
+  background-image: linear-gradient(
+    rgb(68, 59, 59, 0.8),
+    rgb(112, 112, 112, 0.8)
+  );
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
@@ -283,7 +279,7 @@ footer .logo {
 }
 
 #experience {
-  min-height: 100vh;
+  height: 100vh;
   background-image: linear-gradient(
       rgba(68, 59, 59, 0.5),
       rgba(112, 112, 112, 0.5)
@@ -350,7 +346,7 @@ footer .logo {
   width: 80%;
   margin: -150px auto 0;
 
-  & .title{
+  & .title {
     font-size: 24px;
     text-align: center;
     color: inherit;
@@ -368,7 +364,7 @@ footer .logo {
     box-shadow: 8px 8px 24px 0px var(--background-dark);
     color: var(--text-navigation);
 
-    &:hover{
+    &:hover {
       color: var(--text-color);
     }
 
@@ -388,11 +384,10 @@ footer .logo {
     border-radius: 20px;
   }
 
-  & .legend{
+  & .legend {
     background-color: var(--accent-dark);
     color: var(--text-color);
     font-size: 20px;
-
   }
 }
 
@@ -401,6 +396,39 @@ footer .logo {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  margin: 150px 0 -10vh;
+  padding-bottom: 10vh;
+
+  background-image: linear-gradient(
+      rgba(68, 59, 59, 0.5),
+      rgba(112, 112, 112, 0.5)
+    ),
+    url("./images/bg-image.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom 30% left 0;
+  background-size: cover;
+
+  & .contacts-list {
+    display: flex;
+    width: 100%;
+    padding: 150px 0 60px 20%;
+    justify-content: flex-start;
+    gap: 5%;
+    background-image: url("./images/contacts-colour.png");
+    background-repeat: no-repeat;
+    background-position: bottom -30px left 0;
+    background-size: 15%;
+  }
+
+  & .contacts-icon {
+    animation-name: animateContacts;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
 }
 
 .toggle-language_btn {
@@ -416,9 +444,36 @@ footer .logo {
   border-radius: 10px;
 }
 
+@keyframes animateContacts {
+  0% {
+    color: var(--text-dark);
+    transform: rotate(0deg);
+  }
+
+  33% {
+    color: var(--accent-color);
+    transform: rotate(-20deg);
+  }
+
+  66% {
+    color: var(--text-color);
+    transform: rotate(0deg);
+  }
+
+  95% {
+    color: var(--accent-color);
+    transform: rotate(20deg);
+  }
+
+  100% {
+    color: var(--text-dark);
+    transform: rotate(0deg);
+  }
+}
+
 @keyframes animateLogo {
   0% {
-    transform: rotate(10deg);
+    transform: rotate(0deg);
   }
 
   33% {
@@ -426,14 +481,14 @@ footer .logo {
   }
 
   66% {
-    transform: rotate(20deg);
-  }
-
-  95% {
     transform: rotate(-20deg);
   }
 
+  95% {
+    transform: rotate(-10deg);
+  }
+
   100% {
-    transform: rotate(10deg);
+    transform: rotate(0deg);
   }
 }

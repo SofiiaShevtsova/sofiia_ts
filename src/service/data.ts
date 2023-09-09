@@ -4,7 +4,12 @@ import game from "../images/game.png";
 import cake from "../images/cake.png";
 import iceCream from "../images/ice-cream.png";
 import movies from "../images/movies.png";
+import { IconsLinkedin, IconsGithub, IconsGmail, IconsPhone, IconsTelegram } from "../components/Icon/Icons";
 
+type Contacts = {
+  value: string;
+  icon: JSX.Element;
+};
 export type User = {
   name: string;
   work: string;
@@ -21,11 +26,11 @@ export type User = {
     link: string;
   }[];
   contacts: {
-    mobilePhone: string;
-    telegram: string;
-    linkedin: string;
-    gitHub: string;
-    email: string;
+    mobilePhone: Contacts;
+    telegram: Contacts;
+    linkedin: Contacts;
+    gitHub: Contacts;
+    email: Contacts;
   };
   navigation: string[][];
 };
@@ -87,11 +92,29 @@ export const userEn: User = {
     },
   ],
   contacts: {
-    mobilePhone: "+48 507-755-251",
-    telegram: "https://t.me/ShevtsovaSofiia",
-    linkedin: "https://www.linkedin.com/in/sofiiashevtsova",
-    gitHub: "https://github.com/SofiiaShevtsova",
-    email: "sofika2404@gmail.com",
+    mobilePhone: {
+      value: "tel:+48507755251",
+      icon: IconsPhone(),
+    },
+    telegram: {
+      value: "https://t.me/ShevtsovaSofiia",
+      icon: IconsTelegram(),
+    },
+
+    linkedin: {
+      value: "https://www.linkedin.com/in/sofiiashevtsova",
+      icon: IconsLinkedin(),
+    },
+
+    gitHub: {
+      value: "https://github.com/SofiiaShevtsova",
+      icon: IconsGithub(),
+    },
+
+    email: {
+      value: "mailto:sofika2404@gmail.com",
+      icon: IconsGmail(),
+    },
   },
   navigation: [
     ["About me", "about"],
@@ -158,13 +181,30 @@ export const userUa: User = {
       link: "https://sofiiashevtsova.github.io/project4/",
     },
   ],
-
   contacts: {
-    mobilePhone: "+48 507-755-251",
-    telegram: "https://t.me/ShevtsovaSofiia",
-    linkedin: "https://www.linkedin.com/in/sofiiashevtsova",
-    gitHub: "https://github.com/SofiiaShevtsova",
-    email: "sofika2404@gmail.com",
+    mobilePhone: {
+      value: "tel:+48507755251",
+      icon: IconsPhone(),
+    },
+    telegram: {
+      value: "https://t.me/ShevtsovaSofiia",
+      icon: IconsTelegram(),
+    },
+
+    linkedin: {
+      value: "https://www.linkedin.com/in/sofiiashevtsova",
+      icon: IconsLinkedin(),
+    },
+
+    gitHub: {
+      value: "https://github.com/SofiiaShevtsova",
+      icon: IconsGithub(),
+    },
+
+    email: {
+      value: "mailto:sofika2404@gmail.com",
+      icon: IconsGmail(),
+    },
   },
   navigation: [
     ["Це я!", "about"],

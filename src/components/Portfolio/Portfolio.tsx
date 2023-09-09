@@ -13,7 +13,6 @@ export const Portfolio = () => {
 
           <Carousel
             autoPlay={true}
-            stopOnHover={true}
             centerMode={true}
             showThumbs={false}
             infiniteLoop={true}
