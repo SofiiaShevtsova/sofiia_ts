@@ -29,6 +29,11 @@ function App() {
     boolean,
     React.Dispatch<React.SetStateAction<boolean>>
   ] = useState(false);
+    const [contactsStart, setContacts]: [
+    boolean,
+    React.Dispatch<React.SetStateAction<boolean>>
+  ] = useState(false);
+
 
   const changeLang = () => {
     const langToSet = lang === "en" ? "ua" : "en";
@@ -42,6 +47,9 @@ function App() {
     }
     if (topHeight > 1100 && topHeight < 1700) {
       !experienceStart && setExperience(true);
+    }
+    if (topHeight > 1700) {
+      !contactsStart && setContacts(true);
     }
   };
 
@@ -57,7 +65,7 @@ function App() {
             <Skills start={skillsStart} />
             <Experience start={experienceStart} />
             <Portfolio />
-            <Contacts />
+            <Contacts start={contactsStart} />
           </>
         </Container>
         <Footer />
