@@ -9,7 +9,7 @@ export const Footer = () => {
       </p>
       <p>All Rights Reserved</p>
       <p>Developed by</p>
-      <a href={userEn.contacts.gitHub}>
+      <a href={userEn.contacts.gitHub.value}>
         <Logo />
       </a>
     </footer>
