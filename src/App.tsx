@@ -29,6 +29,11 @@ function App() {
     boolean,
     React.Dispatch<React.SetStateAction<boolean>>
   ] = useState(false);
+    const [contactsStart, setContacts]: [
+    boolean,
+    React.Dispatch<React.SetStateAction<boolean>>
+  ] = useState(false);
+
 
   const changeLang = () => {
     const langToSet = lang === "en" ? "ua" : "en";
@@ -37,11 +42,14 @@ function App() {
 
   const scrollHandler = (e: any) => {
     const topHeight = e.nativeEvent.srcElement.scrollTop;
-    if (topHeight > 600 && topHeight < 1200) {
+    if (topHeight > 400 && topHeight < 900) {
       !skillsStart && setSkills(true);
     }
-    if (topHeight > 1100 && topHeight < 1700) {
+    if (topHeight > 900 && topHeight < 1400) {
       !experienceStart && setExperience(true);
+    }
+    if (topHeight > 1400) {
+      !contactsStart && setContacts(true);
     }
   };
 
@@ -57,7 +65,7 @@ function App() {
             <Skills start={skillsStart} />
             <Experience start={experienceStart} />
             <Portfolio />
-            <Contacts />
+            <Contacts start={contactsStart} />
           </>
         </Container>
         <Footer />

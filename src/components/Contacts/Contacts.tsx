@@ -1,36 +1,31 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { AppContext } from "../../App";
-import { useSpring, animated } from "@react-spring/web";
+import { Spring, animated } from "@react-spring/web";
 
-export const Contacts = () => {
+export const Contacts = ({ start }: { start: boolean }) => {
   const { userInfo } = useContext(AppContext);
-  const [start, setStart] = useState(false);
-  const [springs, api] = useSpring(() => ({ from: { x: -500, opacity: 0 } }));
-
-  const handleShow = () => {
-    if (!start) {
-      api.start({
-        from: {
-          x: -500,
-          opacity: 0,
-        },
-        to: {
-          x: 0,
-          opacity: 1,
-        },
-        delay: 1000,
-      });
-    }
-    setStart(true);
-  };
 
   const contactsArray = userInfo ? Object.entries(userInfo.contacts) : [];  
 
   return (
     userInfo && (
-      <section id={userInfo.navigation[4][1]} onMouseEnter={handleShow}>
+      <section id={userInfo.navigation[4][1]}>
         <h2 className="hidden">{userInfo.navigation[4][0]}</h2>
-        <animated.ul className="contacts-list" style={{ ...springs }}>
+                {start && (
+          <Spring
+            from={{
+          x: -500,
+          opacity: 0,
+        }}
+            to={{
+          x: 0,
+          opacity: 1,
+        }}
+            delay={1000}
+            config={{ tension: 170, friction: 60 }}
+          >
+            {(style: any) => (
+        <animated.ul className="contacts-list" style={style}>
           {contactsArray.map((el) => (
             <li className="experience-item" key={el[0]}>
               <a href={el[1].value} className="contacts-link">
@@ -39,6 +34,10 @@ export const Contacts = () => {
             </li>
           ))}
         </animated.ul>
+            )}
+          </Spring>
+        )}
+
       </section>
     )
   );

@@ -8,6 +8,8 @@
   --text-navigation: rgba(170, 170, 170, 0.8);
   --text-color: rgba(255, 255, 255, 0.8);
   --text-dark: rgb(0, 0, 0);
+  --height-mobile: 500px;
+  --height-common: 800px;
 
   --font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     sans-serif;
@@ -47,6 +49,7 @@ section {
   margin: 0;
   list-style: none;
 }
+
 img {
   display: block;
 }
@@ -105,7 +108,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 60px;
+  gap: 50px;
+  padding: 10px;
   box-shadow: inset 0 -8px 10px 1px rgb(150, 150, 150);
   background-color: transparent;
 }
@@ -122,18 +126,25 @@ footer {
   align-items: center;
   padding: 20px;
   box-shadow: inset 0 8px 10px 1px rgb(100, 100, 100);
+
+  font-size: 10px;
+
   & span {
     color: var(--accent-color);
+  }
+  & .logo {
+    font-size: 18px;
   }
 }
 
 .logo {
   display: inline;
   font-family: "Lovers Quarrel", cursive;
-  font-size: 48px;
+  font-size: 24px;
   color: rgb(1, 17, 31);
   text-shadow: 3px 3px 2px var(--accent-color);
   cursor: pointer;
+
   &:hover {
     animation-name: animateLogo;
     animation-duration: 4000ms;
@@ -142,20 +153,20 @@ footer {
   }
 }
 
-footer .logo {
-  font-size: 28px;
-}
-
 .navigation {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  font-size: 12px;
 
-  & * {
+  & .nav-link {
     color: var(--text-navigation);
     text-shadow: 1px 1px 1px rgb(0, 0, 0);
     transition: var(--transition-function);
   }
-  & *:hover {
+
+  & .nav-link:hover {
     transform: scale(1.2);
     color: var(--text-color);
     text-shadow: 1px 1px 1px var(--accent-color);
@@ -163,13 +174,13 @@ footer .logo {
 }
 
 #about {
-  margin-top: -80px;
-  height: 800px;
-  padding: 80px 50px 30px;
+  margin-top: -15vh;
+  height: var(--height-mobile);
+  padding: 10px;
   background-image: url("./images/main-photo.png");
   background-repeat: no-repeat;
-  background-position: top 0 right 0;
-  background-size: 45%;
+  background-position: bottom 0 right -20px;
+  background-size: 250px;
   background-attachment: fixed;
 
   color: var(--text-color);
@@ -177,30 +188,33 @@ footer .logo {
   & span {
     color: var(--accent-color);
   }
+
   & .name {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
-    font-size: 80px;
-    margin: 80px 0 50px 40px;
-  }
-  & .position {
     font-size: 40px;
-    margin-left: 40px;
+    margin: 30% 0 20px 10px;
+  }
+
+  & .position {
+    font-size: 20px;
+    margin-left: 10px;
     text-decoration: underline;
   }
+
   & .information {
     position: relative;
     z-index: 2;
     margin: 150px auto;
-    padding: 50px 20px;
-    width: 75%;
-    min-height: 400px;
+    padding: 10px;
+    width: 90%;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     background-color: var(--background-dark);
     border-radius: 5px;
   }
@@ -212,7 +226,7 @@ footer .logo {
     flex-direction: column;
     gap: 10px;
     color: var(--text-color);
-    font-size: 20px;
+    font-size: 14px;
   }
 
   & .download {
@@ -234,8 +248,8 @@ footer .logo {
 }
 
 #skills {
-  min-height: 100vh;
-  padding: 30px 50px;
+  min-height: var(--height-mobile);
+  padding: 50vh 10px 10px;
   background-image: linear-gradient(
       rgba(68, 59, 59, 0.5),
       rgba(112, 112, 112, 0.5)
@@ -254,32 +268,38 @@ footer .logo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
   }
+
   & .skills-row {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
+
     &:last-child {
-      width: 80%;
+      width: 100%;
+      max-width: 400px;
+
       & > * {
-        padding: 20px 50px;
+        flex: 1;
+        padding: 20px;
         background-color: rgba(0, 80, 0, 0.8);
       }
     }
   }
+
   & .skills-box {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     background-color: var(--accent-color);
     border: 1px solid var(--background-dark);
-    font-size: 20px;
+    font-size: 16px;
     color: var(--text-color);
   }
 }
 
 #experience {
-  height: 100vh;
+  height: var(--height-mobile);
   background-image: linear-gradient(
       rgba(68, 59, 59, 0.5),
       rgba(112, 112, 112, 0.5)
@@ -293,42 +313,35 @@ footer .logo {
   align-items: flex-end;
 
   & .experience-list {
-    width: 1200px;
-    height: 500px;
+    width: 100%;
+    max-height: 500px;
     display: flex;
     flex-direction: column;
-    gap: 70px;
+    gap: 20px;
     justify-content: flex-start;
-    margin-top: 100px;
+    margin: auto 5%;
   }
 
   & .experience-item {
-    & > p {
-      display: inline;
-    }
-    &:first-child {
-      margin-left: 200px;
-    }
-    &:nth-child(2) {
-      margin-left: 250px;
-    }
-    &:nth-child(3) {
-      margin-left: 500px;
-    }
-    &:last-child {
-      margin-left: 600px;
+    & > * {
+      margin-left: 0;
     }
   }
 
   & .company {
     color: var(--text-navigation);
     font-size: 20px;
+    display: inline-block;
   }
 
   & .duration {
     color: var(--text-color);
     font-size: 18px;
+    display: block;
+    text-align: end;
+    margin-top: 20px;
   }
+
   & .company::after {
     content: "";
     display: inline-block;
@@ -336,21 +349,19 @@ footer .logo {
     height: 10px;
     border-radius: 50%;
     background-color: var(--accent-color);
-    margin: 0 85px;
+    margin: 0 20px;
   }
 }
 
 #portfolio {
   position: relative;
-  height: 0;
-  width: 80%;
-  margin: -150px auto 0;
+  height: 50px;
+  width: 90%;
+  margin: -50px auto 0;
 
   & .title {
     font-size: 24px;
-    text-align: center;
     color: inherit;
-    margin-bottom: 30px;
   }
 
   & > .carousel-box {
@@ -358,11 +369,21 @@ footer .logo {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px;
+    padding: 5px;
     border-radius: 20px;
     background-color: var(--accent-color);
     box-shadow: 8px 8px 24px 0px var(--background-dark);
     color: var(--text-navigation);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    & > * {
+      max-width: 500px;
+    }
 
     &:hover {
       color: var(--text-color);
@@ -387,16 +408,16 @@ footer .logo {
   & .legend {
     background-color: var(--accent-dark);
     color: var(--text-color);
-    font-size: 20px;
+    font-size: 12px;
   }
 }
 
 #contacts {
-  height: 100vh;
+  height: var(--height-mobile);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin: 150px 0 -10vh;
+  margin-bottom: -10vh;
   padding-bottom: 10vh;
 
   background-image: linear-gradient(
@@ -407,17 +428,19 @@ footer .logo {
   background-repeat: no-repeat;
   background-position: bottom 30% left 0;
   background-size: cover;
+  background-attachment: fixed;
 
   & .contacts-list {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    padding: 150px 0 60px 20%;
-    justify-content: flex-start;
-    gap: 5%;
+    padding: 0 0 100px 20%;
+    justify-content: center;
+    gap: 15%;
     background-image: url("./images/contacts-colour.png");
     background-repeat: no-repeat;
     background-position: bottom -30px left 0;
-    background-size: 15%;
+    background-size: 180px;
   }
 
   & .contacts-icon {
@@ -425,6 +448,7 @@ footer .logo {
     animation-duration: 4000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+
     &:hover {
       animation-play-state: paused;
     }
@@ -442,6 +466,224 @@ footer .logo {
   padding: 10px;
   border: none;
   border-radius: 10px;
+}
+
+@media screen and (min-width: 700px) {
+  header {
+    padding: 10px 60px;
+  }
+
+  .logo {
+    font-size: 40px;
+  }
+
+  footer {
+    font-size: 20px;
+
+    & .logo {
+      font-size: 28px;
+    }
+  }
+
+  .navigation {
+    justify-content: flex-start;
+    gap: 20px;
+    font-size: 18px;
+  }
+
+  #about {
+    height: var(--height-common);
+    padding: 80px 50px 30px;
+    background-position: top 10px right 0;
+    background-size: 400px;
+
+    & .name {
+      font-size: 50px;
+      margin: 50px 0 50px;
+    }
+
+    & .position {
+      font-size: 30px;
+      margin-left: 0;
+    }
+
+    & .information {
+      margin: 150px auto;
+      padding: 30px 20px;
+      width: 90%;
+      min-height: 400px;
+      gap: 20px;
+    }
+
+    & .about-me {
+      font-size: 20px;
+    }
+  }
+
+  #skills {
+    height: var(--height-common);
+    padding: 30px 50px 150px;
+
+    & .skills-list {
+      gap: 30px;
+    }
+
+    & .skills-row {
+      gap: 30px;
+
+      &:last-child {
+        width: 80%;
+
+        & > * {
+          padding: 20px 60px;
+        }
+      }
+    }
+
+    & .skills-box {
+      padding: 20px;
+      font-size: 30px;
+    }
+  }
+
+  #experience {
+    height: var(--height-common);
+    & .experience-list {
+      width: 650px;
+      height: 500px;
+      gap: 70px;
+      margin: 0 auto 70px;
+    }
+
+    & .experience-item {
+      &:first-child {
+        margin-left: -25px;
+      }
+
+      &:nth-child(2) {
+        margin-left: 0;
+      }
+
+      &:nth-child(3) {
+        margin-left: 200px;
+      }
+
+      &:last-child {
+        margin-left: auto;
+      }
+    }
+
+    & .company {
+      display: inline;
+    }
+
+    & .duration {
+      display: inline;
+      margin-top: 0;
+    }
+
+    & .company::after {
+      margin: 0 30px;
+    }
+  }
+
+  #portfolio {
+    height: 200px;
+    width: 80%;
+    margin: -200px auto 0;
+
+    & .title {
+      font-size: 24px;
+      text-align: center;
+      color: inherit;
+      margin-bottom: 30px;
+    }
+
+    & > .carousel-box {
+      padding: 20px;
+      & > * {
+        max-width: 90%;
+      }
+    }
+
+    & .legend {
+      font-size: 20px;
+    }
+  }
+
+  #contacts {
+    height: 100vh;
+    & .contacts-list {
+      padding: 20% 0 100px 30%;
+      justify-content: flex-start;
+      gap: 5%;
+      background-size: 280px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 48px;
+  }
+
+  .navigation {
+    font-size: 24px;
+  }
+
+  #about {
+    background-size: 500px;
+
+    & .name {
+      font-size: 100px;
+      margin: 50px 0 50px 40px;
+    }
+
+    & .position {
+      font-size: 40px;
+      margin-left: 40px;
+    }
+
+    & .information {
+      margin: 80px auto;
+    }
+
+    & .about-me {
+      font-size: 36px;
+    }
+  }
+
+  #skills {
+    padding: 30px 50px;
+  }
+
+  #experience {
+    & .experience-list {
+      width: 1200px;
+    }
+
+    & .experience-item {
+      &:first-child {
+        margin-left: 150px;
+      }
+
+      &:nth-child(2) {
+        margin-left: 200px;
+      }
+
+      &:nth-child(3) {
+        margin-left: 450px;
+      }
+
+      &:last-child {
+        margin-right: 100px;
+      }
+    }
+
+    & .company::after {
+      margin: 0 85px;
+    }
+  }
 }
 
 @keyframes animateContacts {

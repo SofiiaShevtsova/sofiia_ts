@@ -120,7 +120,7 @@ export const userEn: User = {
     ["About me", "about"],
     ["Skills", "skills"],
     ["Experience", "experience"],
-    ["Portfolio", "portfolio"],
+    ["My works", "portfolio"],
     ["Contacts", "contacts"],
   ],
 };
