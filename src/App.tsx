@@ -32,7 +32,11 @@ function App() {
     const [contactsStart, setContacts]: [
     boolean,
     React.Dispatch<React.SetStateAction<boolean>>
-  ] = useState(false);
+    ] = useState(false);
+  
+  const screenWidth = window.screen.width
+  console.log(screenWidth);
+  
 
 
   const changeLang = () => {
@@ -41,14 +45,21 @@ function App() {
   };
 
   const scrollHandler = (e: any) => {
+    const setheight = screenWidth < 700 ? 300 : 600;
+    const sectionHeight = screenWidth < 700 ? 400 : 800;
+    const lastSection = screenWidth < 700 ? 100 : 600;
+
     const topHeight = e.nativeEvent.srcElement.scrollTop;
-    if (topHeight > 400 && topHeight < 900) {
+    console.dir(topHeight);
+    
+
+    if (topHeight > setheight) {
       !skillsStart && setSkills(true);
     }
-    if (topHeight > 900 && topHeight < 1400) {
+    if (topHeight > (setheight + sectionHeight)) {
       !experienceStart && setExperience(true);
     }
-    if (topHeight > 1400) {
+    if (topHeight > (setheight + sectionHeight + lastSection)) {
       !contactsStart && setContacts(true);
     }
   };
