@@ -8,6 +8,8 @@
   --text-navigation: rgba(170, 170, 170, 0.8);
   --text-color: rgba(255, 255, 255, 0.8);
   --text-dark: rgb(0, 0, 0);
+  --height-mobile: 500px;
+  --height-common: 800px;
 
   --font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     sans-serif;
@@ -173,12 +175,12 @@ footer {
 
 #about {
   margin-top: -15vh;
-  height: 100vh;
+  height: var(--height-mobile);
   padding: 10px;
   background-image: url("./images/main-photo.png");
   background-repeat: no-repeat;
-  background-position: bottom 0 right -30%;
-  background-size: 80%;
+  background-position: bottom 0 right -20px;
+  background-size: 250px;
   background-attachment: fixed;
 
   color: var(--text-color);
@@ -246,7 +248,7 @@ footer {
 }
 
 #skills {
-  min-height: 100vh;
+  min-height: var(--height-mobile);
   padding: 50vh 10px 10px;
   background-image: linear-gradient(
       rgba(68, 59, 59, 0.5),
@@ -276,9 +278,10 @@ footer {
 
     &:last-child {
       width: 100%;
-      justify-content: space-between;
+      max-width: 400px;
 
       & > * {
+        flex: 1;
         padding: 20px;
         background-color: rgba(0, 80, 0, 0.8);
       }
@@ -296,7 +299,7 @@ footer {
 }
 
 #experience {
-  height: 100vh;
+  height: var(--height-mobile);
   background-image: linear-gradient(
       rgba(68, 59, 59, 0.5),
       rgba(112, 112, 112, 0.5)
@@ -316,7 +319,7 @@ footer {
     flex-direction: column;
     gap: 20px;
     justify-content: flex-start;
-    margin: auto 10px;
+    margin: auto 5%;
   }
 
   & .experience-item {
@@ -358,9 +361,7 @@ footer {
 
   & .title {
     font-size: 24px;
-    text-align: center;
     color: inherit;
-    margin-bottom: 30px;
   }
 
   & > .carousel-box {
@@ -373,6 +374,16 @@ footer {
     background-color: var(--accent-color);
     box-shadow: 8px 8px 24px 0px var(--background-dark);
     color: var(--text-navigation);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    & > * {
+      max-width: 500px;
+    }
 
     &:hover {
       color: var(--text-color);
@@ -401,45 +412,48 @@ footer {
   }
 }
 
-    #contacts {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      margin-bottom:-10vh;
-      padding-bottom: 10vh;
-  
-      background-image: linear-gradient(rgba(68, 59, 59, 0.5),
-          rgba(112, 112, 112, 0.5)),
-        url("./images/bg-image.jpg");
-      background-repeat: no-repeat;
-      background-position: bottom 30% left 0;
-      background-size: cover;
-  
-      & .contacts-list {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        padding: 0 10% 40%;
-        justify-content: center;
-        gap: 15%;
-        background-image: url("./images/contacts-colour.png");
-        background-repeat: no-repeat;
-        background-position: bottom -30px left 0;
-        background-size: 50%;
-      }
-  
-      & .contacts-icon {
-        animation-name: animateContacts;
-        animation-duration: 4000ms;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-  
-        &:hover {
-          animation-play-state: paused;
-        }
-      }
+#contacts {
+  height: var(--height-mobile);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: -10vh;
+  padding-bottom: 10vh;
+
+  background-image: linear-gradient(
+      rgba(68, 59, 59, 0.5),
+      rgba(112, 112, 112, 0.5)
+    ),
+    url("./images/bg-image.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom 30% left 0;
+  background-size: cover;
+  background-attachment: fixed;
+
+  & .contacts-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 0 100px 20%;
+    justify-content: center;
+    gap: 15%;
+    background-image: url("./images/contacts-colour.png");
+    background-repeat: no-repeat;
+    background-position: bottom -30px left 0;
+    background-size: 180px;
+  }
+
+  & .contacts-icon {
+    animation-name: animateContacts;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    &:hover {
+      animation-play-state: paused;
     }
+  }
+}
 
 .toggle-language_btn {
   position: fixed;
@@ -454,22 +468,13 @@ footer {
   border-radius: 10px;
 }
 
-@media screen and (max-width: 699px) {
-}
-
-@media screen and (min-width: 700px) and (max-width: 1199px) {
-}
-
-@media screen and (min-width: 1200px) and (max-width: 1599px) {
-}
-
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 700px) {
   header {
     padding: 10px 60px;
   }
 
   .logo {
-    font-size: 48px;
+    font-size: 40px;
   }
 
   footer {
@@ -483,39 +488,40 @@ footer {
   .navigation {
     justify-content: flex-start;
     gap: 20px;
-    font-size: 24px;
+    font-size: 18px;
   }
 
   #about {
-    height: 115vh;
+    height: var(--height-common);
     padding: 80px 50px 30px;
-    background-position: bottom 0 right 0;
-    background-size: 50%;
+    background-position: top 10px right 0;
+    background-size: 400px;
 
     & .name {
-      font-size: 100px;
-      margin: 250px 0 50px 40px;
+      font-size: 50px;
+      margin: 50px 0 50px;
     }
 
     & .position {
-      font-size: 40px;
-      margin-left: 40px;
+      font-size: 30px;
+      margin-left: 0;
     }
 
     & .information {
       margin: 150px auto;
-      padding: 50px 20px;
-      width: 75%;
+      padding: 30px 20px;
+      width: 90%;
       min-height: 400px;
       gap: 20px;
     }
 
     & .about-me {
-      font-size: 36px;
+      font-size: 20px;
     }
   }
 
   #skills {
+    height: var(--height-common);
     padding: 30px 50px 150px;
 
     & .skills-list {
@@ -527,7 +533,6 @@ footer {
 
       &:last-child {
         width: 80%;
-        justify-content: center;
 
         & > * {
           padding: 20px 60px;
@@ -542,28 +547,29 @@ footer {
   }
 
   #experience {
+    height: var(--height-common);
     & .experience-list {
-      width: 1400px;
+      width: 650px;
       height: 500px;
       gap: 70px;
-      margin-top: 20%;
+      margin: 0 auto 70px;
     }
 
     & .experience-item {
       &:first-child {
-        margin-left: 23%;
+        margin-left: -25px;
       }
 
       &:nth-child(2) {
-        margin-left: 26%;
+        margin-left: 0;
       }
 
       &:nth-child(3) {
-        margin-left: 45%;
+        margin-left: 200px;
       }
 
       &:last-child {
-        margin-left: 50%;
+        margin-left: auto;
       }
     }
 
@@ -577,14 +583,14 @@ footer {
     }
 
     & .company::after {
-      margin: 0 85px;
+      margin: 0 30px;
     }
   }
 
   #portfolio {
-    height: 150px;
+    height: 200px;
     width: 80%;
-    margin: -150px auto 0;
+    margin: -200px auto 0;
 
     & .title {
       font-size: 24px;
@@ -595,6 +601,9 @@ footer {
 
     & > .carousel-box {
       padding: 20px;
+      & > * {
+        max-width: 90%;
+      }
     }
 
     & .legend {
@@ -603,11 +612,76 @@ footer {
   }
 
   #contacts {
+    height: 100vh;
     & .contacts-list {
-      padding: 20% 0 10% 25%;
+      padding: 20% 0 100px 30%;
       justify-content: flex-start;
       gap: 5%;
-      background-size: 25%;
+      background-size: 280px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 48px;
+  }
+
+  .navigation {
+    font-size: 24px;
+  }
+
+  #about {
+    background-size: 500px;
+
+    & .name {
+      font-size: 100px;
+      margin: 50px 0 50px 40px;
+    }
+
+    & .position {
+      font-size: 40px;
+      margin-left: 40px;
+    }
+
+    & .information {
+      margin: 80px auto;
+    }
+
+    & .about-me {
+      font-size: 36px;
+    }
+  }
+
+  #skills {
+    padding: 30px 50px;
+  }
+
+  #experience {
+    & .experience-list {
+      width: 1200px;
+    }
+
+    & .experience-item {
+      &:first-child {
+        margin-left: 150px;
+      }
+
+      &:nth-child(2) {
+        margin-left: 200px;
+      }
+
+      &:nth-child(3) {
+        margin-left: 450px;
+      }
+
+      &:last-child {
+        margin-right: 100px;
+      }
+    }
+
+    & .company::after {
+      margin: 0 85px;
     }
   }
 }
