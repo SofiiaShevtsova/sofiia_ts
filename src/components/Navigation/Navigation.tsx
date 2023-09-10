@@ -5,7 +5,7 @@ export const Navigation = () => {
      const { userInfo } = useContext(AppContext);
     return (
         <nav className="navigation">
-            {userInfo?.navigation.map(el =>(<a href={"#"+el[1]} key={el[0]}>{el[0]}</a>))}
+            {userInfo?.navigation.map(el =>(<a href={"#"+el[1]} key={el[0]} className="nav-link">{el[0]}</a>))}
       </nav>
     )
 }
