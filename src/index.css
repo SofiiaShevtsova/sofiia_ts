@@ -245,53 +245,110 @@ footer {
   }
 }
 
-    #skills {
-      min-height: 100vh;
-      padding: 50vh 10px 10px;
-      background-image: linear-gradient(rgba(68, 59, 59, 0.5),
-          rgba(112, 112, 112, 0.5)),
-        url("./images/skills.png");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      background-attachment: fixed;
-  
-      display: flex;
-      align-items: flex-end;
-  
-      & .skills-list {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-      }
-  
-      & .skills-row {
-        display: flex;
-        justify-content: center;
-        gap: 5px;
-  
-        &:last-child {
-          width: 100%;
-          justify-content: space-between;
-  
-          &>* {
-            padding: 20px;
-            background-color: rgba(0, 80, 0, 0.8);
-          }
-        }
-      }
-  
-      & .skills-box {
-        text-align: center;
-        padding: 10px;
-        background-color: var(--accent-color);
-        border: 1px solid var(--background-dark);
-        font-size: 16px;
-        color: var(--text-color);
+#skills {
+  min-height: 100vh;
+  padding: 50vh 10px 10px;
+  background-image: linear-gradient(
+      rgba(68, 59, 59, 0.5),
+      rgba(112, 112, 112, 0.5)
+    ),
+    url("./images/skills.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: flex-end;
+
+  & .skills-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  & .skills-row {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+    &:last-child {
+      width: 100%;
+      justify-content: space-between;
+
+      & > * {
+        padding: 20px;
+        background-color: rgba(0, 80, 0, 0.8);
       }
     }
+  }
+
+  & .skills-box {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--accent-color);
+    border: 1px solid var(--background-dark);
+    font-size: 16px;
+    color: var(--text-color);
+  }
+}
+
+#experience {
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(68, 59, 59, 0.5),
+      rgba(112, 112, 112, 0.5)
+    ),
+    url("./images/experience.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  align-items: flex-end;
+
+  & .experience-list {
+    width: 100%;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+    margin: auto 10px;
+  }
+
+  & .experience-item {
+    & > * {
+      margin-left: 0;
+    }
+  }
+
+  & .company {
+    color: var(--text-navigation);
+    font-size: 20px;
+    display: inline-block;
+  }
+
+  & .duration {
+    color: var(--text-color);
+    font-size: 18px;
+    display: block;
+    text-align: end;
+    margin-top: 20px;
+  }
+
+  & .company::after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    margin: 0 20px;
+  }
+}
 
 .toggle-language_btn {
   position: fixed;
@@ -394,68 +451,41 @@ footer {
   }
 
   #experience {
-    height: 100vh;
-    background-image: linear-gradient(
-        rgba(68, 59, 59, 0.5),
-        rgba(112, 112, 112, 0.5)
-      ),
-      url("./images/experience.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    display: flex;
-    align-items: flex-end;
-
     & .experience-list {
-      width: 1200px;
+      width: 1400px;
       height: 500px;
-      display: flex;
-      flex-direction: column;
       gap: 70px;
-      justify-content: flex-start;
-      margin-top: 100px;
+      margin-top: 20%;
     }
 
     & .experience-item {
-      & > p {
-        display: inline;
-      }
-
       &:first-child {
-        margin-left: 200px;
+        margin-left: 23%;
       }
 
       &:nth-child(2) {
-        margin-left: 250px;
+        margin-left: 26%;
       }
 
       &:nth-child(3) {
-        margin-left: 500px;
+        margin-left: 45%;
       }
 
       &:last-child {
-        margin-left: 600px;
+        margin-left: 50%;
       }
     }
 
     & .company {
-      color: var(--text-navigation);
-      font-size: 20px;
+      display: inline;
     }
 
     & .duration {
-      color: var(--text-color);
-      font-size: 18px;
+      display: inline;
+      margin-top: 0;
     }
 
     & .company::after {
-      content: "";
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: var(--accent-color);
       margin: 0 85px;
     }
   }
