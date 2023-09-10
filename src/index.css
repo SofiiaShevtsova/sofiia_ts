@@ -534,7 +534,7 @@ footer {
       &:last-child {
         width: 80%;
 
-        & > * {
+        & > .skills-box {
           padding: 20px 60px;
         }
       }
