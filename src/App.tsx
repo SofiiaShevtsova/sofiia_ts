@@ -48,7 +48,7 @@ function App() {
     if (topHeight > 1100 && topHeight < 1700) {
       !experienceStart && setExperience(true);
     }
-    if (topHeight > 1700) {
+    if (topHeight > 100) {
       !contactsStart && setContacts(true);
     }
   };

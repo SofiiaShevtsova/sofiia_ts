@@ -352,7 +352,7 @@ footer {
 
 #portfolio {
   position: relative;
-  height: 0;
+  height: 50px;
   width: 90%;
   margin: -50px auto 0;
 
@@ -400,6 +400,46 @@ footer {
     font-size: 12px;
   }
 }
+
+    #contacts {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-bottom:-10vh;
+      padding-bottom: 10vh;
+  
+      background-image: linear-gradient(rgba(68, 59, 59, 0.5),
+          rgba(112, 112, 112, 0.5)),
+        url("./images/bg-image.jpg");
+      background-repeat: no-repeat;
+      background-position: bottom 30% left 0;
+      background-size: cover;
+  
+      & .contacts-list {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0 10% 40%;
+        justify-content: center;
+        gap: 15%;
+        background-image: url("./images/contacts-colour.png");
+        background-repeat: no-repeat;
+        background-position: bottom -30px left 0;
+        background-size: 50%;
+      }
+  
+      & .contacts-icon {
+        animation-name: animateContacts;
+        animation-duration: 4000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+  
+        &:hover {
+          animation-play-state: paused;
+        }
+      }
+    }
 
 .toggle-language_btn {
   position: fixed;
@@ -542,6 +582,7 @@ footer {
   }
 
   #portfolio {
+    height: 150px;
     width: 80%;
     margin: -150px auto 0;
 
@@ -562,43 +603,11 @@ footer {
   }
 
   #contacts {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin: 150px 0 -10vh;
-    padding-bottom: 10vh;
-
-    background-image: linear-gradient(
-        rgba(68, 59, 59, 0.5),
-        rgba(112, 112, 112, 0.5)
-      ),
-      url("./images/bg-image.jpg");
-    background-repeat: no-repeat;
-    background-position: bottom 30% left 0;
-    background-size: cover;
-
     & .contacts-list {
-      display: flex;
-      width: 100%;
-      padding: 150px 0 60px 20%;
+      padding: 20% 0 10% 25%;
       justify-content: flex-start;
       gap: 5%;
-      background-image: url("./images/contacts-colour.png");
-      background-repeat: no-repeat;
-      background-position: bottom -30px left 0;
-      background-size: 15%;
-    }
-
-    & .contacts-icon {
-      animation-name: animateContacts;
-      animation-duration: 4000ms;
-      animation-iteration-count: infinite;
-      animation-timing-function: linear;
-
-      &:hover {
-        animation-play-state: paused;
-      }
+      background-size: 25%;
     }
   }
 }
