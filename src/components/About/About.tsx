@@ -22,13 +22,17 @@ export const About = () => {
         </div>
         <p className="position">{userInfo.work}</p>
         <div className="information">
-                <Logo />
-                <div className="about-me">
-                    <p>{userInfo.phrase}</p>
-                    <p>{userInfo.aboutMe}</p>
-                    <p>{ userInfo.textForCV} &#128521;</p>
-                </div>
-          <a className="download" href="../../images/Sofiia_Shevtsova_CV.pdf" download>
+          <Logo />
+          <div className="about-me">
+            <p>{userInfo.phrase}</p>
+            <p>{userInfo.aboutMe}</p>
+            <p>{userInfo.textForCV} &#128521;</p>
+          </div>
+          <a
+            className="download"
+            href="https://sunny-yeot-584d1a.netlify.app/Sofiia_Shevtsova_CV.pdf"
+            download
+          >
             {userInfo.downloadBtn}
           </a>
         </div>
