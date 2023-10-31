@@ -4,7 +4,14 @@ import game from "../images/game.png";
 import cake from "../images/cake.png";
 import iceCream from "../images/ice-cream.png";
 import movies from "../images/movies.png";
-import { IconsLinkedin, IconsGithub, IconsGmail, IconsPhone, IconsTelegram } from "../components/Icon/Icons";
+import promptopia from "../images/promptopia.png";
+import {
+  IconsLinkedin,
+  IconsGithub,
+  IconsGmail,
+  IconsPhone,
+  IconsTelegram,
+} from "../components/Icon/Icons";
 
 type Contacts = {
   value: string;
@@ -64,6 +71,11 @@ export const userEn: User = {
       imageURL: travelApp,
       name: "Travel-app",
       link: "https://dulcet-dodol-f6ff6a.netlify.app/",
+    },
+    {
+      imageURL: promptopia,
+      name: "PrompTopia",
+      link: "https://first-next-js-project-1xey.vercel.app/",
     },
     {
       imageURL: movies,
@@ -153,6 +165,11 @@ export const userUa: User = {
       imageURL: travelApp,
       name: "Подорожі",
       link: "https://dulcet-dodol-f6ff6a.netlify.app/",
+    },
+    {
+      imageURL: promptopia,
+      name: "Некс проєкт",
+      link: "https://first-next-js-project-1xey.vercel.app/",
     },
     {
       imageURL: movies,
