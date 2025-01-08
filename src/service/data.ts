@@ -1,4 +1,4 @@
-import travelApp from "../images/travel-app.png";
+import kvazar from "../images/kvazar.png";
 import food from "../images/food.png";
 import game from "../images/game.png";
 import cake from "../images/cake.png";
@@ -68,29 +68,19 @@ export const userEn: User = {
   ],
   portfolio: [
     {
-      imageURL: travelApp,
-      name: "Travel-app",
-      link: "https://dulcet-dodol-f6ff6a.netlify.app/",
-    },
-    {
-      imageURL: promptopia,
-      name: "PrompTopia",
-      link: "https://first-next-js-project-1xey.vercel.app/",
-    },
-    {
       imageURL: movies,
       name: "Movies",
       link: "https://sofiiashevtsova.github.io/films_list/",
     },
     {
+      imageURL: kvazar,
+      name: "Kvazar",
+      link: "https://www.kvazar-xmastree.com.ua/uk",
+    },
+    {
       imageURL: game,
       name: "Little game",
       link: "https://sofiiashevtsova.github.io/brainnest_JS/pages/shipsBattle.html",
-    },
-    {
-      imageURL: food,
-      name: "Food-app",
-      link: "https://loki99911.github.io/Node.JS_Project_Front/main",
     },
     {
       imageURL: cake,
@@ -162,16 +152,6 @@ export const userUa: User = {
   ],
   portfolio: [
     {
-      imageURL: travelApp,
-      name: "Подорожі",
-      link: "https://dulcet-dodol-f6ff6a.netlify.app/",
-    },
-    {
-      imageURL: promptopia,
-      name: "Некс проєкт",
-      link: "https://first-next-js-project-1xey.vercel.app/",
-    },
-    {
       imageURL: movies,
       name: "Фільми",
       link: "https://sofiiashevtsova.github.io/films_list/",
@@ -183,9 +163,9 @@ export const userUa: User = {
       link: "https://sofiiashevtsova.github.io/brainnest_JS/pages/shipsBattle.html",
     },
     {
-      imageURL: food,
-      name: "Їжа",
-      link: "https://loki99911.github.io/Node.JS_Project_Front/",
+      imageURL: kvazar,
+      name: "Kvazar",
+      link: "https://www.kvazar-xmastree.com.ua/uk",
     },
     {
       imageURL: cake,
