@@ -1,10 +1,9 @@
+import { ReactNode } from "react";
 import kvazar from "../images/kvazar.png";
-import food from "../images/food.png";
 import game from "../images/game.png";
 import cake from "../images/cake.png";
 import iceCream from "../images/ice-cream.png";
 import movies from "../images/movies.png";
-import promptopia from "../images/promptopia.png";
 import {
   IconsLinkedin,
   IconsGithub,
@@ -15,7 +14,7 @@ import {
 
 type Contacts = {
   value: string;
-  icon: JSX.Element;
+  icon: ReactNode;
 };
 export type User = {
   name: string;
