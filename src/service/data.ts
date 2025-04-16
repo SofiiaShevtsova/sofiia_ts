@@ -4,6 +4,8 @@ import game from "../images/game.png";
 import cake from "../images/cake.png";
 import iceCream from "../images/ice-cream.png";
 import movies from "../images/movies.png";
+import factory from "../images/factory-wise.png";
+
 import {
   IconsLinkedin,
   IconsGithub,
@@ -60,7 +62,9 @@ export const userEn: User = {
     ["HTML", "CSS", "JavaScript"],
   ],
   experience: [
-    ["Сool new courses", "soon"],
+    ["Factory Wise", "from July 2024"],
+    ["Big Orange Cat", "from March 2024 to July 2024"],
+    ["BAZA TRAINEE UKRAINE", "from September 2023 to March 2024"],
     ["Binary Studio Academy", "from June 2023 to August 2023"],
     ["Brainnest", "from April 2023 to May 2023"],
     ["Academy GO IT", "from August 2022 to April 2023"],
@@ -75,6 +79,11 @@ export const userEn: User = {
       imageURL: kvazar,
       name: "Kvazar",
       link: "https://www.kvazar-xmastree.com.ua/uk",
+    },
+    {
+      imageURL: factory,
+      name: "Factory Wise",
+      link: "https://factorywise.com.ua",
     },
     {
       imageURL: game,
@@ -144,7 +153,9 @@ export const userUa: User = {
     ["HTML", "CSS", "JavaScript"],
   ],
   experience: [
-    ["Нові круті курси", "скоро"],
+    ["Factory Wise", "від липень 2024"],
+    ["Big Orange Cat", "березень 2024 - липень 2024"],
+    ["BAZA TRAINEE UKRAINE", "вересень 2023 - березень 2024"],
     ["Binary Studio Academy", "червень 2023 - серпень 2023"],
     ["Brainnest", "квітень 2023 - травень 2023"],
     ["Academy GO IT", "серпень 2022 - квітень 2023"],
@@ -165,6 +176,11 @@ export const userUa: User = {
       imageURL: kvazar,
       name: "Kvazar",
       link: "https://www.kvazar-xmastree.com.ua/uk",
+    },
+    {
+      imageURL: factory,
+      name: "Factory Wise",
+      link: "https://factorywise.com.ua",
     },
     {
       imageURL: cake,
