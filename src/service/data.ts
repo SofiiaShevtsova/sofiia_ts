@@ -103,7 +103,7 @@ export const userEn: User = {
   ],
   contacts: {
     mobilePhone: {
-      value: "tel:+48507755251",
+      value: "tel:+48796460283",
       icon: IconsPhone(),
     },
     telegram: {
@@ -195,7 +195,7 @@ export const userUa: User = {
   ],
   contacts: {
     mobilePhone: {
-      value: "tel:+48507755251",
+      value: "tel:+48796460283",
       icon: IconsPhone(),
     },
     telegram: {
