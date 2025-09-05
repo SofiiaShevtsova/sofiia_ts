@@ -9,7 +9,7 @@
   --text-color: rgba(255, 255, 255, 0.8);
   --text-dark: rgb(0, 0, 0);
   --height-mobile: 500px;
-  --height-common: 800px;
+  --height-common: 100vh;
 
   --font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     sans-serif;
@@ -52,6 +52,7 @@ section {
 
 img {
   display: block;
+  object-fit: contain;
 }
 
 a {
@@ -92,7 +93,7 @@ a {
   overflow-y: auto;
   scroll-behavior: smooth;
   background-image: linear-gradient(
-    rgb(68, 59, 59, 0.8),
+    rgb(68, 59, 59, 0.8) 20%,
     rgb(112, 112, 112, 0.8)
   );
   font-family: var(--font-family);
@@ -175,12 +176,12 @@ footer {
 
 #about {
   margin-top: -15vh;
-  height: var(--height-mobile);
+  height: 100vh;
   padding: 30px 10px 10px;
   background-image: url("./images/main-photo.png");
   background-repeat: no-repeat;
   background-position: top 80px right -20px;
-  background-size: 250px;
+  background-size: 50vh;
   background-attachment: fixed;
 
   color: var(--text-color);
@@ -206,7 +207,7 @@ footer {
   & .information {
     position: relative;
     z-index: 2;
-    margin: 100px auto;
+    margin: 30vh auto;
     padding: 10px;
     width: 90%;
     min-height: 200px;
@@ -217,6 +218,7 @@ footer {
     gap: 10px;
     background-color: var(--background-dark);
     border-radius: 5px;
+    box-shadow: -4px -3px 33px 0px rgb(151, 152, 155);
   }
 
   & .about-me {
@@ -248,17 +250,12 @@ footer {
 }
 
 #skills {
-  height: var(--height-mobile);
-  padding: 50vh 10px 10px;
+  height: 160px;
+  padding: 70px 10px 0;
   background-image: linear-gradient(
-      rgba(68, 59, 59, 0.5),
-      rgba(112, 112, 112, 0.5)
-    ),
-    url("./images/skills.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+    rgb(112, 112, 112, 0.8),
+    rgba(68, 59, 59, 0.5)
+  );
 
   display: flex;
   justify-content: center;
@@ -267,35 +264,13 @@ footer {
   & .skills-list {
     width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 5px;
-  }
+    gap: 64px;
+    padding: 12px 32px;
 
-  & .skills-row {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-
-    &:last-child {
-      width: 100%;
-      max-width: 400px;
-
-      & > * {
-        flex: 1;
-        padding: 20px;
-        background-color: rgba(0, 80, 0, 0.8);
-      }
+    & > div {
+      height: 45px;
     }
-  }
-
-  & .skills-box {
-    text-align: center;
-    padding: 10px;
-    background-color: var(--accent-color);
-    border: 1px solid var(--background-dark);
-    font-size: 16px;
-    color: var(--text-color);
   }
 }
 
@@ -416,11 +391,14 @@ footer {
 
 #contacts {
   height: var(--height-mobile);
+  max-width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: flex-end;
   margin-bottom: -10vh;
-  padding-bottom: 10vh;
+  padding: 250px 0 15vh;
+  gap: 32px;
+  flex-wrap: wrap;
 
   background-image: linear-gradient(
       rgba(68, 59, 59, 0.5),
@@ -431,30 +409,6 @@ footer {
   background-position: bottom 30% left 0;
   background-size: cover;
   background-attachment: fixed;
-
-  & .contacts-list {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    padding: 0 0 100px 20%;
-    justify-content: center;
-    gap: 15%;
-    background-image: url("./images/contacts-colour.png");
-    background-repeat: no-repeat;
-    background-position: bottom -30px left 0;
-    background-size: 180px;
-  }
-
-  & .contacts-icon {
-    animation-name: animateContacts;
-    animation-duration: 4000ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-
-    &:hover {
-      animation-play-state: paused;
-    }
-  }
 }
 
 .toggle-language_btn {
@@ -496,8 +450,8 @@ footer {
   #about {
     height: var(--height-common);
     padding: 80px 50px 30px;
-    background-position: top 10px right 0;
-    background-size: 400px;
+    background-position: bottom 10px right 0;
+    background-size: 60vh;
 
     & .name {
       font-size: 50px;
@@ -510,9 +464,10 @@ footer {
     }
 
     & .information {
-      margin: 150px auto;
+      margin: 150px 50px 0 0;
       padding: 30px 20px;
       width: 90%;
+      max-width: 700px;
       min-height: 400px;
       gap: 20px;
     }
@@ -523,29 +478,8 @@ footer {
   }
 
   #skills {
-    height: var(--height-common);
-    padding: 30px 50px 150px;
-
-    & .skills-list {
-      gap: 30px;
-    }
-
-    & .skills-row {
-      gap: 30px;
-
-      &:last-child {
-        width: 80%;
-
-        & > .skills-box {
-          padding: 20px 60px;
-        }
-      }
-    }
-
-    & .skills-box {
-      padding: 20px;
-      font-size: 30px;
-    }
+    height: 200px;
+    padding: 30px 50px 0;
   }
 
   #experience {
@@ -577,7 +511,6 @@ footer {
       &:nth-child(5) {
         margin-left: 250px;
       }
-
 
       &:last-child {
         margin-left: auto;
@@ -625,13 +558,7 @@ footer {
   }
 
   #contacts {
-    height: 600px;
-    & .contacts-list {
-      padding: 20% 0 100px 30%;
-      justify-content: flex-start;
-      gap: 5%;
-      background-size: 280px;
-    }
+    height: 400px;
   }
 }
 
@@ -645,7 +572,7 @@ footer {
   }
 
   #about {
-    background-size: 500px;
+    background-size: 70vh;
 
     & .name {
       font-size: 100px;
@@ -658,7 +585,8 @@ footer {
     }
 
     & .information {
-      margin: 80px auto;
+      margin: 150px 0 0 30px;
+      max-width: 1000px;
     }
 
     & .about-me {
@@ -667,7 +595,12 @@ footer {
   }
 
   #skills {
-    padding: 30px 50px;
+    height: 400px;
+    padding: 30px 50px 0;
+
+    & .skills-list > div {
+      height: 60px;
+    }
   }
 
   #experience {
@@ -697,7 +630,6 @@ footer {
         margin-left: 400px;
       }
 
-
       &:last-child {
         margin-left: 400px;
       }
@@ -712,16 +644,12 @@ footer {
     & > .carousel-box {
       padding: 20px;
       height: fit-content;
-
     }
-
   }
 
   #contacts {
-    height: 750px;
+    height: 40vw;
   }
-
-
 }
 
 @keyframes animateContacts {

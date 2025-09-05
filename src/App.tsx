@@ -47,7 +47,6 @@ function App() {
   const scrollHandler = (e: any) => {
     const setheight = screenWidth < 700 ? 300 : 600;
     const sectionHeight = screenWidth < 700 ? 400 : 800;
-    const lastSection = screenWidth < 700 ? 100 : 600;
 
     const topHeight = e.nativeEvent.srcElement.scrollTop;
     console.dir(topHeight);
@@ -58,9 +57,6 @@ function App() {
     }
     if (topHeight > (setheight + sectionHeight)) {
       !experienceStart && setExperience(true);
-    }
-    if (topHeight > (setheight + sectionHeight + lastSection)) {
-      !contactsStart && setContacts(true);
     }
   };
 
@@ -76,7 +72,7 @@ function App() {
             <Skills start={skillsStart} />
             <Experience start={experienceStart} />
             <Portfolio />
-            <Contacts start={contactsStart} />
+            <Contacts />
           </>
         </Container>
         <Footer />

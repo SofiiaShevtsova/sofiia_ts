@@ -1,41 +1,60 @@
 import { useContext } from "react";
 import { AppContext } from "../../App";
-import { animated, Spring } from "@react-spring/web";
+import InfiniteLooper from "./InfiniteLooper";
 
-export const Skills = ({start}: {start: boolean}) => {
+export const Skills = ({ start }: { start: boolean }) => {
   const { userInfo } = useContext(AppContext);
-
 
   return (
     userInfo && (
       <section id={userInfo.navigation[1][1]}>
         <h2 className="hidden">{userInfo.navigation[1][0]}</h2>
-        {start && (
-          <ul className="skills-list">
-            {userInfo.skills.map((el: string[], ind: number) => (
-              <li className="skills-row" key={el[0] + "1"}>
-                {el.map((skill: string, i: number) => (
-                  <Spring
-                    key={skill}
-                    from={{ y: -500, opacity: 0 }}
-                    to={{ y: 0, opacity: 1 }}
-                    delay={50 * (i + ind)}
-                    config={{ tension: 170, friction: 60 }}
-                  >
-                    {(style: any) => (
-                      <animated.p
-                        className="skills-box"
-                        style={style}
-                      >
-                        {skill}
-                      </animated.p>
-                    )}
-                  </Spring>
-                ))}
-              </li>
-            ))}
-          </ul>
-        )}
+        <InfiniteLooper speed={20} direction={"right"}>
+          <div className="skills-list">
+            <div>
+              <img
+                style={{ height: "100%" }}
+                src="/wordmark_dark.svg"
+                alt="Skill icon"
+              />
+            </div>
+            <div>
+              <img style={{ height: "100%" }} src="/next.svg" alt="Skill icon" />
+            </div>
+
+            <div>
+              <img
+                style={{ height: "100%" }}
+                src="/nodejs.svg"
+                alt="Skill icon"
+              />
+            </div>
+            <div>
+              <img
+                style={{ height: "100%" }}
+                src="/tailwind-css.svg"
+                alt="Skill icon"
+              />
+            </div>
+            <div>
+              <img style={{ height: "100%" }} src="/mui.svg" alt="Skill icon" />
+            </div>
+            <div>
+              <img
+                style={{ height: "100%" }}
+                src="/mongo.png"
+                alt="Skill icon"
+              />
+            </div>
+            <div>
+              <img
+                style={{ height: "100%" }}
+                src="/PostgreSQL.png"
+                alt="Skill icon"
+              />
+            </div>
+          </div>
+        </InfiniteLooper>
       </section>
     )
   );

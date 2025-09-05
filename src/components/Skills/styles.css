@@ -1,0 +1,32 @@
+@keyframes slide {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.looper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.looper__innerList {
+  display: flex;
+  width: fit-content;
+  justify-content: center;
+}
+
+.looper__listInstance {
+    display: flex;
+  gap: 20;
+  width: max-content;
+  animation: none;
+
+}
+
+.looper__innerList[data-animate="true"] .looper__listInstance {
+  animation: slide linear infinite;
+}

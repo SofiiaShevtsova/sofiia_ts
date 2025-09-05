@@ -26,7 +26,7 @@ export type User = {
   phrase: string;
   aboutMe: string;
   textForCV: string;
-  skills: string[][];
+  skills: string[];
   experience: string[][];
   portfolio: {
     imageURL: string;
@@ -55,11 +55,11 @@ export const userEn: User = {
     "I want to become a professional in the field of creating applications. ",
   textForCV: "You can find more information about me in my CV",
   skills: [
-    ["Styled-component"],
-    ["Formik", "Chakra UI"],
-    ["MongoBD", "SQL", "NodeJS"],
-    ["SASS", "TypeScript", "React", "Redux"],
-    ["HTML", "CSS", "JavaScript"],
+    "Styled-component",
+    "Formik", "Chakra UI",
+    "MongoBD", "SQL", "NodeJS",
+    "SASS", "TypeScript", "React", "Redux",
+    "HTML", "CSS", "JavaScript"
   ],
   experience: [
     ["Factory Wise", "from July 2024"],
@@ -146,11 +146,11 @@ export const userUa: User = {
     "Завжди хочеться щось вдосконалити і зробити краще. Хочу стати професіоналом в сфері створення додатків. ",
   textForCV: "Більше інформації про мене знайдете в моєму резюме",
   skills: [
-    ["Styled-component"],
-    ["Formik", "Chakra UI"],
-    ["MongoBD", "SQL", "NodeJS"],
-    ["SASS", "TypeScript", "React", "Redux"],
-    ["HTML", "CSS", "JavaScript"],
+    "Styled-component",
+    "Formik", "Chakra UI",
+    "MongoBD", "SQL", "NodeJS",
+    "SASS", "TypeScript", "React", "Redux",
+    "HTML", "CSS", "JavaScript"
   ],
   experience: [
     ["Factory Wise", "від липень 2024"],
