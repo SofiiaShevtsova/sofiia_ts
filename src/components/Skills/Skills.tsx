@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AppContext } from "../../App";
 import InfiniteLooper from "./InfiniteLooper";
 
-export const Skills = ({ start }: { start: boolean }) => {
+export const Skills = () => {
   const { userInfo } = useContext(AppContext);
 
   return (
