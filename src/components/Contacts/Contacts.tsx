@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { AppContext } from "../../App";
-import { Spring, animated } from "@react-spring/web";
 
 export const Contacts = () => {
   const { userInfo } = useContext(AppContext);
