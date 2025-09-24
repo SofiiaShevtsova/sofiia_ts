@@ -26,11 +26,6 @@ function App() {
     React.Dispatch<React.SetStateAction<boolean>>
   ] = useState(false);
   
-  const screenWidth = window.screen.width
-  console.log(screenWidth);
-  
-
-
   const changeLang = () => {
     const langToSet = lang === "en" ? "ua" : "en";
     setLang(langToSet);
